@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification
+    PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN"
+    "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd">
+
+<page-specification class="net.didion.nagster.tapestry.page.SchedulePage">
+  <description>Nagster Create/Edit Schedule Page</description>
+
+  <context-asset name="css" path="/css/nagster.css"/>
+
+  <bean name="delegate" class="org.apache.tapestry.valid.ValidationDelegate"/>
+
+  <bean name="maxOccurancesValidator" class="org.apache.tapestry.valid.NumberValidator">
+    <set-property name="required" expression="true"/>
+    <set-property name="minimum" expression="0"/>
+    <set-property name="valueType">"int"</set-property>
+  </bean>
+
+  <component id="shell" type="Shell">
+    <static-binding name="title" value="Nagster > Create/Edit Schedule"/>
+    <binding name="stylesheet" expression="assets.css"/>
+  </component>
+  <component id="scheduleForm" type="Form">
+    <binding name="delegate" expression="beans.delegate"/>
+    <binding name="listener" expression="listeners.updateSchedule"/>
+  </component>
+  <component id="eventId" type="Hidden">
+    <binding name="value" expression="eventId"/>
+  </component>
+  <component id="scheduleId" type="Hidden">
+    <binding name="value" expression="scheduleId"/>
+  </component>
+  <component id="startDate" type="contrib:DateField">
+    <binding name="date" expression="startDate"/>
+    <static-binding name="required" value="true"/>
+    <static-binding name="displayName" value="start date"/>
+  </component>
+  <component id="endDate" type="contrib:DateField">
+    <binding name="date" expression="endDate"/>
+    <static-binding name="displayName" value="end date"/>
+  </component>
+  <component id="maxOccurances" type="ValidField">
+    <binding name="value" expression="maxOccurances"/>
+    <binding name="validator" expression="beans.maxOccurancesValidator"/>
+    <static-binding name="displayName" value="max occurances"/>
+  </component>
+  <component id="minutes" type="TextField">
+    <binding name="value" expression="minutes"/>
+  </component>
+  <component id="hours" type="TextField">
+    <binding name="value" expression="hours"/>
+  </component>
+  <component id="days" type="TextField">
+    <binding name="value" expression="days"/>
+  </component>
+  <component id="months" type="TextField">
+    <binding name="value" expression="months"/>
+  </component>
+  <component id="daysOfWeek" type="TextField">
+    <binding name="value" expression="daysOfWeek"/>
+  </component>
+  <component id="years" type="TextField">
+    <binding name="value" expression="years"/>
+  </component>
+</page-specification>

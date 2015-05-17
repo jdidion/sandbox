@@ -1,0 +1,30 @@
+Screen
+* Brightness (slider)
+* Autodim (on/off checkbox)
+* Screen saver delay (slider)
+* Display sleep delay (slider)
+* Primary/Secondary Display
+  * Mirroring/position
+  * Resolution
+Sound
+* Volume (slider)
+* Mute (checkbox)
+* TTS Voice (combo)
+* User interface sound-effected Enabled (checkbox)
+Power
+* Enable GPU (checkbox)
+* HDD Sleep (checkbox)
+* Computer sleep/hibernate delay (slider)
+Input
+* Camera enabled (checkbox)
+* Microphone enabled (checkbox)
+* Keyboard
+  * Backlight brightness (slider)
+  * Enabled (checkbox)
+* Trackpad Enabled (checkbox)
+* Bluetooth enabled (checkbox)
+Applications
+* Autohide Dock (checkbox)
+* Disable Growl messages (checkbox)
+* Start application
+* Execute script (AppleScript or shell script)

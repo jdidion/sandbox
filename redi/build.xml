@@ -1,0 +1,64 @@
+<project name="redi" default="build" basedir=".">
+  <property name="db.driver" value="org.hsqldb.jdbcDriver"/>
+  <property name="db.url" value="jdbc:hsqldb:file:db/jwnl"/>
+  <property name="db.user" value="sa"/>
+  <property name="db.pass" value=""/>
+  <property name="src.dir" value="${basedir}/src"/>
+  <property name="jaxor.dir" value="${basedir}/jaxor"/>
+  <property name="sql.dir" value="${basedir}/sql"/>
+  <property name="lib.dir" value="${basedir}/lib"/>
+  <path id="classpath">
+    <fileset dir="${lib.dir}" includes="*.jar"/>
+    <pathelement path="${jaxor.dir}"/>
+  </path>
+
+  <target name="hsql-create-schema">
+    <sql autocommit="true"
+         driver="${db.driver}"
+         url="${db.url}"
+         userid="${db.user}"
+         password="${db.pass}"
+         classpathref="classpath">
+      <fileset dir="${sql.dir}">
+        <include name="*.schema"/>
+      </fileset>
+    </sql>
+  </target>
+
+  <target name="hsql-import">
+    <sql autocommit="true"
+         driver="${db.driver}"
+         url="${db.url}"
+         userid="${db.user}"
+         password="${db.pass}"
+         classpathref="classpath">
+      <fileset dir="${sql.dir}">
+        <include name="*.script"/>
+      </fileset>
+    </sql>
+  </target>
+
+  <target name="schema2jaxor">
+    <taskdef name="schema2jaxor"
+             classname="net.sourceforge.jaxor.generator.MappingGeneratorTask"
+             classpathref="classpath"/>
+    <schema2jaxor destdir="${jaxor.dir}"
+                  packagename="net.sf.redi.wordnet.princeton.en.v2_0.domain"
+                  verbose="true"
+                  user="${db.user}"
+                  password="${db.pass}"
+                  url="${db.url}"
+                  driver="${db.driver}"/>
+  </target>
+
+  <target name="generate-domain">
+    <taskdef name="jaxor"
+             classname="net.sourceforge.jaxor.parser.AntTask"
+             classpathref="classpath"/>
+    <jaxor destdir="${src.dir}">
+      <fileset dir="${jaxor.dir}">
+        <include name="*.jaxor"/>
+      </fileset>
+    </jaxor>
+  </target>
+</project>

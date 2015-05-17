@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification
+    PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN"
+    "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd">
+
+<page-specification class="net.didion.nagster.tapestry.page.AlertPage">
+  <description>Nagster Create/Edit Alert Page</description>
+
+  <context-asset name="css" path="/css/nagster.css"/>
+
+  <bean name="delegate" class="org.apache.tapestry.valid.ValidationDelegate"/>
+
+  <component id="shell" type="Shell">
+    <static-binding name="title" value="Nagster > Create/Edit Alert"/>
+    <binding name="stylesheet" expression="assets.css"/>
+  </component>
+  <component id="actionForm" type="Form">
+    <binding name="delegate" expression="beans.delegate"/>
+  </component>
+  <component id="actionEventId" type="Hidden">
+    <binding name="value" expression="eventId"/>
+  </component>
+  <component id="actionAlertGroupId" type="Hidden">
+    <binding name="value" expression="alertGroupId"/>
+  </component>
+  <component id="actionAlertId" type="Hidden">
+    <binding name="value" expression="alertId"/>
+  </component>
+  <component id="actionSelect" type="PropertySelection">
+    <binding name="value" expression="actionDescriptor"/>
+    <binding name="model" expression="actionDescriptorModel"/>
+    <static-binding name="submitOnChange" value="true"/>
+  </component>
+  <component id="parameterForm" type="Form">
+    <binding name="delegate" expression="beans.delegate"/>
+    <binding name="listener" expression="listeners.updateAlert"/>
+  </component>
+  <component id="operation" type="Hidden">
+    <binding name="value" expression="operation"/>
+  </component>
+  <component id="parameterEventId" type="Hidden">
+    <binding name="value" expression="eventId"/>
+  </component>
+  <component id="parameterAlertGroupId" type="Hidden">
+    <binding name="value" expression="alertGroupId"/>
+  </component>
+  <component id="parameterAlertId" type="Hidden">
+    <binding name="value" expression="alertId"/>
+  </component>
+  <component id="parameterDescriptors" type="Foreach">
+    <binding name="source" expression="parameterDescriptors"/>
+  </component>
+  <component id="parameterName" type="Insert">
+    <binding name="value" expression="components.parameterDescriptors.value.name"/>
+  </component>
+  <component id="parameterValueType" type="RadioGroup">
+    <binding name="selected" expression="getParameter(components.parameterDescriptors.index).type"/>
+  </component>
+  <component id="textValueType" type="Radio">
+    <static-binding name="value" value="value"/>
+    <binding name="disabled" expression="!components.parameterDescriptors.value.acceptsValue"/>
+  </component>
+  <component id="textValueLabel" type="Insert">
+    <static-binding name="value" value="value:"/>
+    <binding name="class" expression="components.parameterDescriptors.value.acceptsValue ? '' : 'disabled'"/>
+  </component>
+  <component id="isField" type="Conditional">
+    <binding name="condition" expression="components.parameterDescriptors.value.acceptedValues == null"/>
+  </component>
+  <component id="textValueField" type="TextField">
+    <binding name="value" expression="getParameter(components.parameterDescriptors.index).value"/>
+    <binding name="disabled" expression="getParameter(components.parameterDescriptors.index).type != components.textValueType.value"/>
+  </component>
+  <component id="isSelect" type="Conditional">
+    <binding name="condition" expression="components.parameterDescriptors.value.acceptedValues != null"/>
+  </component>
+  <component id="textValueSelect" type="PropertySelection">
+    <binding name="value" expression="getParameter(components.parameterDescriptors.index).value"/>
+    <binding name="model" expression="acceptedValuesModel[components.parameterDescriptors.index]"/>
+    <binding name="disabled" expression="getParameter(components.parameterDescriptors.index).type != components.textValueType.value"/>
+  </component>
+  <component id="resourceValueType" type="Radio">
+    <static-binding name="value" value="resource"/>
+    <binding name="disabled" expression="!components.parameterDescriptors.value.acceptsResource"/>
+  </component>
+  <component id="resourceLabel" type="Insert">
+    <static-binding name="value" value="resource:"/>
+    <binding name="class" expression="components.parameterDescriptors.value.acceptsResource ? '' : 'disabled'"/>
+  </component>
+  <component id="resourceSelect" type="PropertySelection">
+    <binding name="value" expression="getParameter(components.parameterDescriptors.index).resource"/>
+    <binding name="model" expression="resourceModel[components.parameterDescriptors.index]"/>
+    <binding name="disabled" expression="getParameter(components.parameterDescriptors.index).type != components.resourceValueType.value"/>
+  </component>
+  <component id="applicationValueType" type="Radio">
+    <static-binding name="value" value="application"/>
+    <binding name="disabled" expression="!components.parameterDescriptors.value.acceptsApplication"/>
+  </component>
+  <component id="applicationLabel" type="Insert">
+    <static-binding name="value" value="application:"/>
+    <binding name="class" expression="components.parameterDescriptors.value.acceptsApplication ? '' : 'disabled'"/>
+  </component>
+  <component id="applicationSelect" type="PropertySelection">
+    <binding name="value" expression="getParameter(components.parameterDescriptors.index).application"/>
+    <binding name="model" expression="applicationModel[components.parameterDescriptors.index]"/>
+    <binding name="disabled" expression="getParameter(components.parameterDescriptors.index).type != components.applicationValueType.value"/>
+  </component>
+</page-specification>

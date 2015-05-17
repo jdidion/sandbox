@@ -1,0 +1,5 @@
+content nicker jar:chrome/nicker.jar!/content/nicker/
+skin nicker classic/1.0 jar:chrome/nicker.jar!/skin/classic/nicker/
+locale nicker en-US jar:chrome/nicker.jar!/locale/nicker/en-US/
+overlay chrome://browser/content/browser.xul chrome://nicker/content/nickerOverlay.xul
+overlay chrome://navigator/content/navigator.xul chrome://nicker/content/nickerOverlay.xul

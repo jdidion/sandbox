@@ -1,0 +1,1 @@
+RElational DIctionary API. API for accessing relational dictionaries. Concrete implementation for WordNet.

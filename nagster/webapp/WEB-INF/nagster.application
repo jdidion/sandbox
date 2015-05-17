@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application
+    PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN"
+    "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd">
+
+<application name="nagster" engine-class="org.apache.tapestry.engine.BaseEngine">
+  <description>Nagster Web Interface</description>
+  <page name="Home" specification-path="index.page"/>
+  <property name="org.apache.tapestry.visit-class">net.didion.nagster.tapestry.Visit</property>
+  <library id="contrib" specification-path="/org/apache/tapestry/contrib/Contrib.library"/>
+</application>

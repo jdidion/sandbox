@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<module id="nagster" version="1.0.0">
+  <sub-module descriptor="nagster.base.xml"/>
+  <sub-module descriptor="nagster.inst.xml"/>
+</module>

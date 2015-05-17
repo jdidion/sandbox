@@ -1,0 +1,257 @@
+Tprofiles
+v7
+r0
+t290543898.939276
+cCheck dependencies
+cProcessInfoPlistFile /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Info.plist profiles-Info.plist
+cCopyStringsFile /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCompileXIB /Volumes/secure/projects/profiles/profiles/English.lproj/MainMenu.xib
+cCopyTiffFile /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Resources/profile.tiff /Users/johndidion/Desktop/profile.tiff
+cProcessPCH /var/folders/DP/DP+pn-QSG3m1IVxmPUaqgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/profiles_Prefix-gfeozcawjsiurdeclxvwouemcscn/profiles_Prefix.pch.gch profiles_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/main.o /Volumes/secure/projects/profiles/profiles/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/profilesAppDelegate.o /Volumes/secure/projects/profiles/profiles/profilesAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/Menulet.o /Volumes/secure/projects/profiles/profiles/Menulet.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cLd /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/MacOS/profiles normal x86_64
+cTouch /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004A769DAB00000000000000EE
+t1249287595
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/Users/johndidion/Desktop/profile.png
+c000000004BA121240000000000000C3E
+t1268850980
+s3134
+
+N/Users/johndidion/Desktop/profile.tiff
+c000000004BA1216C0000000000001096
+t1268851052
+s4246
+
+N/Volumes/secure/projects/profiles/profiles/English.lproj/InfoPlist.strings
+c000000004B9FDF07000000000000002D
+t1268768519
+s45
+
+N/Volumes/secure/projects/profiles/profiles/English.lproj/MainMenu.xib
+c000000004B9FDF08000000000002BB76
+t1268768520
+s179062
+
+N/Volumes/secure/projects/profiles/profiles/Menulet.h
+c000000004BA10FFD00000000000000D0
+t1268846589
+s208
+i<Cocoa/Cocoa.h>
+
+N/Volumes/secure/projects/profiles/profiles/Menulet.m
+c000000004BA1106D00000000000002F8
+t1268846701
+s760
+i"Menulet.h"
+
+N/Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app
+t1268851098
+s102
+
+N/Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Info.plist
+t1268851092
+s889
+
+N/Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/MacOS/profiles
+t1268851098
+s15608
+
+N/Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/PkgInfo
+t1268851092
+s8
+
+N/Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1268851092
+s92
+
+N/Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Resources/English.lproj/MainMenu.nib
+t1268851093
+s34397
+
+N/Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Resources/profile.png
+t2
+s0
+
+N/Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Resources/profile.tiff
+t1268851092
+s4246
+
+N/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/Menulet.o
+t1268851098
+s17316
+
+N/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/main.o
+t1268851098
+s5008
+
+N/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/profiles.LinkFileList
+c000000004BA121940000000000000168
+t1268851092
+s360
+
+N/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/profilesAppDelegate.o
+t1268851098
+s21144
+
+N/Volumes/secure/projects/profiles/profiles/main.m
+c000000004B9FDF0800000000000000EF
+t1268768520
+s239
+i<Cocoa/Cocoa.h>
+
+N/Volumes/secure/projects/profiles/profiles/profilesAppDelegate.h
+c000000004B9FDF08000000000000012F
+t1268768520
+s303
+i<Cocoa/Cocoa.h>
+
+N/Volumes/secure/projects/profiles/profiles/profilesAppDelegate.m
+c000000004B9FDF080000000000000165
+t1268768520
+s357
+i"profilesAppDelegate.h"
+
+N/Volumes/secure/projects/profiles/profiles/profiles_Prefix.pch
+c000000004B9FDF080000000000000093
+t1268768520
+s147
+i<Cocoa/Cocoa.h>
+
+N/var/folders/DP/DP+pn-QSG3m1IVxmPUaqgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/profiles_Prefix-gfeozcawjsiurdeclxvwouemcscn/profiles_Prefix.pch.gch
+t1268851097
+s54212368
+
+Nprofiles-Info.plist
+c000000004B9FDF0800000000000003EA
+t1268768520
+s1002
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies290543892#290543892#0(0"0(0#1#0"7947009927035180032#0"0#
+
+CCompileC build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/Menulet.o /Volumes/secure/projects/profiles/profiles/Menulet.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s290543898.144498
+e290543898.264948
+r1
+xCompileC
+xbuild/profiles.build/Debug/profiles.build/Objects-normal/x86_64/Menulet.o
+x/Volumes/secure/projects/profiles/profiles/Menulet.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Volumes/secure/projects/profiles/profiles/Menulet.m290543898#290543898#0(0"0(0#0#52"/Volumes/secure/projects/profiles/profiles/Menulet.m4300885448#1520"    cd /Volumes/secure/projects/profiles/profiles    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-generated-files.hmap -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-own-target-headers.hmap -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-all-target-headers.hmap -iquote /Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-project-headers.hmap -F/Volumes/secure/projects/profiles/profiles/build/Debug -I/Volumes/secure/projects/profiles/profiles/build/Debug/include -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/DerivedSources/x86_64 -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/DerivedSources -include /var/folders/DP/DP+pn-QSG3m1IVxmPUaqgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/profiles_Prefix-gfeozcawjsiurdeclxvwouemcscn/profiles_Prefix.pch -c /Volumes/secure/projects/profiles/profiles/Menulet.m -o /Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/Menulet.o0#
+
+CCompileC build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/main.o /Volumes/secure/projects/profiles/profiles/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s290543897.896871
+e290543898.144407
+r1
+xCompileC
+xbuild/profiles.build/Debug/profiles.build/Objects-normal/x86_64/main.o
+x/Volumes/secure/projects/profiles/profiles/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@57"Compile /Volumes/secure/projects/profiles/profiles/main.m290543897#290543898#0(0"0(0#0#49"/Volumes/secure/projects/profiles/profiles/main.m4300885448#1514"    cd /Volumes/secure/projects/profiles/profiles    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-generated-files.hmap -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-own-target-headers.hmap -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-all-target-headers.hmap -iquote /Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-project-headers.hmap -F/Volumes/secure/projects/profiles/profiles/build/Debug -I/Volumes/secure/projects/profiles/profiles/build/Debug/include -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/DerivedSources/x86_64 -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/DerivedSources -include /var/folders/DP/DP+pn-QSG3m1IVxmPUaqgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/profiles_Prefix-gfeozcawjsiurdeclxvwouemcscn/profiles_Prefix.pch -c /Volumes/secure/projects/profiles/profiles/main.m -o /Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/main.o0#
+
+CCompileC build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/profilesAppDelegate.o /Volumes/secure/projects/profiles/profiles/profilesAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s290543897.897732
+e290543898.147534
+r1
+xCompileC
+xbuild/profiles.build/Debug/profiles.build/Objects-normal/x86_64/profilesAppDelegate.o
+x/Volumes/secure/projects/profiles/profiles/profilesAppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Volumes/secure/projects/profiles/profiles/profilesAppDelegate.m290543897#290543898#0(0"0(0#0#64"/Volumes/secure/projects/profiles/profiles/profilesAppDelegate.m4300885448#1544"    cd /Volumes/secure/projects/profiles/profiles    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-generated-files.hmap -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-own-target-headers.hmap -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-all-target-headers.hmap -iquote /Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-project-headers.hmap -F/Volumes/secure/projects/profiles/profiles/build/Debug -I/Volumes/secure/projects/profiles/profiles/build/Debug/include -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/DerivedSources/x86_64 -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/DerivedSources -include /var/folders/DP/DP+pn-QSG3m1IVxmPUaqgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/profiles_Prefix-gfeozcawjsiurdeclxvwouemcscn/profiles_Prefix.pch -c /Volumes/secure/projects/profiles/profiles/profilesAppDelegate.m -o /Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/profilesAppDelegate.o0#
+
+CCompileXIB /Volumes/secure/projects/profiles/profiles/English.lproj/MainMenu.xib
+s290543892.191018
+e290543893.525503
+r1
+xCompileXIB
+x/Volumes/secure/projects/profiles/profiles/English.lproj/MainMenu.xib
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib290543892#290543893#0(0"0(0#0#69"/Volumes/secure/projects/profiles/profiles/English.lproj/MainMenu.xib4300885448#340"    cd /Volumes/secure/projects/profiles/profiles    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Resources/English.lproj/MainMenu.nib /Volumes/secure/projects/profiles/profiles/English.lproj/MainMenu.xib0#
+
+CCopyStringsFile /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+s290543892.178740
+e290543892.609468
+r1
+xCopyStringsFile
+x/Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings290543892#290543892#0(0"0(0#0#74"/Volumes/secure/projects/profiles/profiles/English.lproj/InfoPlist.strings4300885448#374"    cd /Volumes/secure/projects/profiles/profiles    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Resources/English.lproj0#
+
+CCopyTiffFile /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Resources/profile.tiff /Users/johndidion/Desktop/profile.tiff
+s290543892.609558
+e290543892.683500
+r1
+xCopyTiffFile
+x/Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Resources/profile.tiff
+x/Users/johndidion/Desktop/profile.tiff
+lSLF07#2@43"Copy /Users/johndidion/Desktop/profile.tiff290543892#290543892#0(0"0(0#0#38"/Users/johndidion/Desktop/profile.tiff4300885448#275"    cd /Volumes/secure/projects/profiles/profiles    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copytiff /Users/johndidion/Desktop/profile.tiff --outdir /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Resources0#
+
+CCpResource build/Debug/profiles.app/Contents/Resources/profile.png /Users/johndidion/Desktop/profile.png
+r0
+
+CLd /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/MacOS/profiles normal x86_64
+s290543898.265179
+e290543898.936570
+r1
+xLd
+x/Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/MacOS/profiles
+xnormal
+xx86_64
+lSLF07#2@96"Link /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/MacOS/profiles290543898#290543898#0(0"0(0#0#0"4300885448#567"    cd /Volumes/secure/projects/profiles/profiles    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Volumes/secure/projects/profiles/profiles/build/Debug -F/Volumes/secure/projects/profiles/profiles/build/Debug -filelist /Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/Objects-normal/x86_64/profiles.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/MacOS/profiles0#
+
+CProcessInfoPlistFile /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Info.plist profiles-Info.plist
+s290543892.157206
+e290543892.178640
+r1
+xProcessInfoPlistFile
+x/Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Info.plist
+xprofiles-Info.plist
+lSLF07#2@27"Process profiles-Info.plist290543892#290543892#0(0"0(0#0#62"/Volumes/secure/projects/profiles/profiles/profiles-Info.plist28429264708632676#325"    cd /Volumes/secure/projects/profiles/profiles    builtin-infoPlistUtility profiles-Info.plist -genpkginfo /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app/Contents/Info.plist0#
+
+CProcessPCH /var/folders/DP/DP+pn-QSG3m1IVxmPUaqgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/profiles_Prefix-gfeozcawjsiurdeclxvwouemcscn/profiles_Prefix.pch.gch profiles_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s290543893.525681
+e290543897.896709
+r1
+xProcessPCH
+x/var/folders/DP/DP+pn-QSG3m1IVxmPUaqgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/profiles_Prefix-gfeozcawjsiurdeclxvwouemcscn/profiles_Prefix.pch.gch
+xprofiles_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@30"Precompile profiles_Prefix.pch290543893#290543897#0(0"0(0#0#62"/Volumes/secure/projects/profiles/profiles/profiles_Prefix.pch4300885448#1415"    cd /Volumes/secure/projects/profiles/profiles    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-generated-files.hmap -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-own-target-headers.hmap -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-all-target-headers.hmap -iquote /Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/profiles-project-headers.hmap -F/Volumes/secure/projects/profiles/profiles/build/Debug -I/Volumes/secure/projects/profiles/profiles/build/Debug/include -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/DerivedSources/x86_64 -I/Volumes/secure/projects/profiles/profiles/build/profiles.build/Debug/profiles.build/DerivedSources -c /Volumes/secure/projects/profiles/profiles/profiles_Prefix.pch -o /var/folders/DP/DP+pn-QSG3m1IVxmPUaqgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/profiles_Prefix-gfeozcawjsiurdeclxvwouemcscn/profiles_Prefix.pch.gch0#
+
+CTouch /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app
+s290543898.936673
+e290543898.939236
+r1
+xTouch
+x/Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app
+lSLF07#2@73"Touch /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app290543898#290543898#0(0"0(0#0#0"4300885448#140"    cd /Volumes/secure/projects/profiles/profiles    /usr/bin/touch -c /Volumes/secure/projects/profiles/profiles/build/Debug/profiles.app0#
+

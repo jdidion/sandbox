@@ -1,0 +1,38 @@
+<!-- Luna Recursive Factorial -->
+<math>
+  <factorial>
+    <if>
+      <equals>
+        <arg i="1"/><num>1</num>
+      </equals>
+      <true>
+        <num>1</num>
+      </true>
+      <false>
+        <multiply>
+          <arg i="1"/>
+          <factorial>
+            <minus>
+              <arg i="1"/>
+              <num>1</num>
+            </minus>
+          </factorial>
+        </multiply>
+      </false>
+    </if>
+  </factorial>
+</math>
+
+
+Assume that our Luna server is running on host "luna.org", and a user enters the above XML
+code at the interactive prompt "[_". The full XML parsed and tree structure formed in memory. Root level tag "math" becomes the lexical symbol for a new object. Assume the next universal object number is 42. Thus an internal mapping is created for #42 -> "math" tree. User enters the following code at the prompt:
+
+  [_ <x><math><factorial><num>5</num></factorial></math></x>
+
+    or
+   
+  [_ <x><o num="42"><factorial><num>5</num></factorial></o></x>
+  
+In this special case that the interpreter reads a <x> root hierarchy at the command line, the XML is interpreted. Every child of the <x> element is expected to expected to be an object reference, either using a transient lexical name like <math>, or an object number like <o num="42">, or a universal object reference like <o ref="luna.org/42">. Each object reference is resolved to 
+
+how to know when to run "factorial" as a method, rather than looking for the "num" child method of factorial?

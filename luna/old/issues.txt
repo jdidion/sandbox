@@ -1,0 +1,11 @@
+Scoping: what happens in this case:
+
+<set><say/><txt>hi</txt></set>
+
+<set>
+    <Joe><say/></Joe>
+      <lambda>
+         <args><words/></args>
+         <print><words/></print>
+     </lambda>
+</set>

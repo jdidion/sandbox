@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="2">
+  <component name="IdeDocumentManager">
+    <history>
+      <source_position_entry column="0" horizontal_scroll_position="0.0" line="44" url="file://$PROJECT_DIR$/sample/factorial.luna" vertical_scroll_position="0.909396" />
+      <source_position_entry column="13" horizontal_scroll_position="0.1421875" line="2" url="file://$PROJECT_DIR$/src/com/humanbymistake/alpha/data/Bit.java" vertical_scroll_position="0.05704698" />
+      <source_position_entry column="31" horizontal_scroll_position="0.3390625" line="79" url="file://$PROJECT_DIR$/src/com/humanbymistake/alpha/data/Tree.java" vertical_scroll_position="0.88422817" />
+      <source_position_entry column="0" horizontal_scroll_position="0.0" line="0" url="file://$PROJECT_DIR$/build.xml" vertical_scroll_position="0.0" />
+      <source_position_entry column="13" horizontal_scroll_position="0.1421875" line="19" url="jar://D:/jdk1.4/src.zip!/java/lang/Object.java" vertical_scroll_position="0.34256056" />
+      <source_position_entry column="33" horizontal_scroll_position="0.3609375" line="18" url="file://$PROJECT_DIR$/src/com/humanbymistake/alpha/Luna.java" vertical_scroll_position="0.5294118" />
+      <source_position_entry column="19" horizontal_scroll_position="0.2078125" line="2" url="file://$PROJECT_DIR$/src/com/humanbymistake/alpha/data/Object.java" vertical_scroll_position="0.05882353" />
+      <source_position_entry column="24" horizontal_scroll_position="0.2625" line="15" url="file://$PROJECT_DIR$/src/com/humanbymistake/alpha/data/String.java" vertical_scroll_position="0.44117647" />
+      <source_position_entry column="8" horizontal_scroll_position="0.0875" line="129" url="file://D:/Projects/JWNL/src/net/didion/jwnl/JWNL.java" vertical_scroll_position="0.9411765" />
+      <source_position_entry column="28" horizontal_scroll_position="0.30625" line="13" url="file://$PROJECT_DIR$/src/com/humanbymistake/BracketTest.java" vertical_scroll_position="0.3581315" />
+    </history>
+    <open_files>
+      <source_position_entry column="19" horizontal_scroll_position="0.2078125" line="2" url="file://$PROJECT_DIR$/src/com/humanbymistake/alpha/data/Object.java" vertical_scroll_position="0.05882353" />
+      <source_position_entry column="33" horizontal_scroll_position="0.3609375" line="18" url="file://$PROJECT_DIR$/src/com/humanbymistake/alpha/Luna.java" vertical_scroll_position="0.5294118" />
+      <source_position_entry column="24" horizontal_scroll_position="0.2625" line="15" url="file://$PROJECT_DIR$/src/com/humanbymistake/alpha/data/String.java" vertical_scroll_position="0.44117647" />
+      <source_position_entry column="28" horizontal_scroll_position="0.30625" line="13" selected="true" url="file://$PROJECT_DIR$/src/com/humanbymistake/BracketTest.java" vertical_scroll_position="0.3581315" />
+      <source_position_entry column="8" horizontal_scroll_position="0.0875" line="129" url="file://D:/Projects/JWNL/src/net/didion/jwnl/JWNL.java" vertical_scroll_position="0.9411765" />
+      <source_position_entry column="13" horizontal_scroll_position="0.1421875" line="19" url="jar://D:/jdk1.4/src.zip!/java/lang/Object.java" vertical_scroll_position="0.34256056" />
+    </open_files>
+  </component>
+  <component name="UsageViewSettings">
+    <option name="EXPORT_FILE_NAME" value="$PROJECT_DIR$/report.txt" />
+    <option name="IS_EXPANDED" value="false" />
+    <option name="IS_SHOW_PACKAGES" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="IS_FILTER_DUPLICATED_LINE" value="false" />
+  </component>
+  <component name="Debugger">
+    <line_breakpoints />
+    <exception_breakpoints>
+      <breakpoint_any>
+        <option name="ENABLED" value="false" />
+        <option name="SUSPEND_VM" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CONDITION" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="LOG_MESSAGE" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INVERSE_CLASS_FILLTERS" value="false" />
+        <option name="NOTIFY_CAUGHT" value="false" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+      </breakpoint_any>
+    </exception_breakpoints>
+    <field_breakpoints />
+    <method_breakpoints />
+  </component>
+  <component name="DebuggerManager" />
+  <component name="DebuggerSettings">
+    <option name="TRACING_FILTERS_ENABLED" value="true" />
+    <option name="VALUE_LOOKUP_DELAY" value="700" />
+    <option name="DEBUGGER_TRANSPORT" value="0" />
+    <option name="FORCE_CLASSIC_VM" value="true" />
+    <option name="HIDE_DEBUGGER_ON_PROCESS_TERMINATION" value="false" />
+    <option name="SKIP_SYNTHETIC_METHODS" value="true" />
+    <option name="SKIP_CONSTRUCTORS" value="false" />
+    <default_breakpoint_settings>
+      <option name="ENABLED" value="true" />
+      <option name="SUSPEND_VM" value="true" />
+      <option name="COUNT_FILTER_ENABLED" value="false" />
+      <option name="COUNT_FILTER" value="0" />
+      <option name="CONDITION_ENABLED" value="false" />
+      <option name="CONDITION" />
+      <option name="LOG_ENABLED" value="false" />
+      <option name="LOG_EXPRESSION_ENABLED" value="false" />
+      <option name="LOG_MESSAGE" />
+      <option name="CLASS_FILTERS_ENABLED" value="false" />
+      <option name="INVERSE_CLASS_FILLTERS" value="false" />
+      <option name="NOTIFY_CAUGHT" value="true" />
+      <option name="NOTIFY_UNCAUGHT" value="true" />
+      <option name="WATCH_MODIFICATION" value="true" />
+      <option name="WATCH_ACCESS" value="true" />
+      <option name="WATCH_ENTRY" value="true" />
+      <option name="WATCH_EXIT" value="true" />
+    </default_breakpoint_settings>
+    <filter>
+      <option name="PATTERN" value="com.sun.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+    <filter>
+      <option name="PATTERN" value="java.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+    <filter>
+      <option name="PATTERN" value="javax.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+    <filter>
+      <option name="PATTERN" value="org.omg.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+    <filter>
+      <option name="PATTERN" value="sun.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+    <filter>
+      <option name="PATTERN" value="junit.*" />
+      <option name="ENABLED" value="true" />
+    </filter>
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="SORT_MODE" value="0" />
+    <option name="GROUP_OVERRIDINGS" value="true" />
+    <option name="GROUP_IMPLEMENTINGS" value="true" />
+    <option name="AUTOSCROLL_MODE" value="true" />
+    <option name="SHOW_METHODS" value="true" />
+    <option name="SHOW_FIELDS" value="true" />
+    <option name="AUTOSCROLL_FROM_SOURCE" value="false" />
+    <option name="GROUP_GETTERS_AND_SETTERS" value="true" />
+  </component>
+  <component name="ProjectViewSettings">
+    <navigator autoscrollToSource="false" currentView="ProjectPane" flattenPackages="false" showMembers="false" showStructure="false" splitterProportion="0.5" />
+    <view id="ProjectPane">
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/src/com" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/sample" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/src/com/humanbymistake" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/src/com/humanbymistake/util" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/src/com/humanbymistake/alpha/data" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/src/com/humanbymistake/alpha" />
+      <expanded_node type="directory" url="file://$PROJECT_DIR$/src" />
+    </view>
+    <view id="SourcepathPane" />
+    <view id="ClasspathPane" />
+  </component>
+  <component name="RunManager">
+    <option name="SHOW_SETTINGS_BEFORE_RUNNING" value="false" />
+    <option name="COMPILE_BEFORE_RUNNING" value="false" />
+    <activeType name="Application" />
+    <configuration default="true" name="&lt;template&gt;" selected="false" type="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" name="&lt;template&gt;" selected="false" type="Applet">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/config/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+    </configuration>
+    <configuration default="true" name="&lt;template&gt;" selected="false" type="JUnit">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" name="&lt;template&gt;" selected="false" type="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5000" />
+    </configuration>
+    <configuration default="false" name="test" selected="true" type="Application">
+      <option name="MAIN_CLASS_NAME" value="com.humanbymistake.BracketTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+  </component>
+  <component name="BookmarkManager" />
+  <component name="Commander">
+    <leftPanel active="true" view="Project" />
+    <rightPanel active="false" view="Project" />
+    <splitter proportion="0.5" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="last_opened_file_path" value="D:\Projects\JWNL\src\net\didion\jwnl" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+  </component>
+  <component name="SelectInManager" />
+  <component name="HierarchyBrowserManager">
+    <option name="SHOW_PACKAGES" value="false" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="SORT_ALPHABETICALLY" value="false" />
+  </component>
+  <component name="WebViewSettings">
+    <webview autoscrollToSource="false" flattenPackages="false" showMembers="false" />
+  </component>
+  <component name="EjbViewSettings">
+    <EjbView autoscrollToSource="false" showMembers="false" />
+  </component>
+  <component name="LocalVcsConfiguration">
+    <option name="LOCAL_VCS_ENABLED" value="true" />
+    <option name="LOCAL_VCS_PURGING_PERIOD" value="259200000" />
+    <option name="ADD_LABEL_ON_PROJECT_OPEN" value="true" />
+    <option name="ADD_LABEL_ON_PROJECT_COMPILATION" value="true" />
+    <option name="ADD_LABEL_ON_FILE_PACKAGE_COMPILATION" value="true" />
+    <option name="ADD_LABEL_ON_PROJECT_MAKE" value="true" />
+    <option name="ADD_LABEL_ON_RUNNING" value="true" />
+    <option name="ADD_LABEL_ON_DEBUGGING" value="true" />
+    <option name="ADD_LABEL_ON_UNIT_TEST" value="true" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame height="748" width="1032" x="-4" y="-4" />
+    <editor active="false" />
+    <layout>
+      <window_info active="false" anchor="bottom" auto_hide="false" id="Messages" internal_type="docked" order="6" type="docked" visible="false" weight="0.32713178" />
+      <window_info active="false" anchor="bottom" auto_hide="false" id="Inspection" internal_type="sliding" order="5" type="sliding" visible="false" weight="0.4" />
+      <window_info active="false" anchor="right" auto_hide="false" id="Commander" internal_type="sliding" order="0" type="sliding" visible="false" weight="0.4" />
+      <window_info active="true" anchor="bottom" auto_hide="false" id="Run" internal_type="sliding" order="2" type="sliding" visible="true" weight="0.32961783" />
+      <window_info active="false" anchor="left" auto_hide="false" id="Structure" internal_type="sliding" order="1" type="sliding" visible="false" weight="0.25" />
+      <window_info active="false" anchor="left" auto_hide="false" id="Project" internal_type="docked" order="0" type="docked" visible="true" weight="0.2734694" />
+      <window_info active="false" anchor="right" auto_hide="false" id="Ant Build" internal_type="sliding" order="1" type="sliding" visible="false" weight="0.25" />
+      <window_info active="false" anchor="bottom" auto_hide="false" id="Debug" internal_type="sliding" order="3" type="sliding" visible="false" weight="0.4" />
+      <window_info active="false" anchor="right" auto_hide="false" id="Hierarchy" internal_type="sliding" order="2" type="sliding" visible="false" weight="0.25" />
+      <window_info active="false" anchor="bottom" auto_hide="false" id="Find" internal_type="sliding" order="1" type="sliding" visible="false" weight="0.33" />
+      <window_info active="false" anchor="left" auto_hide="false" id="EJB" internal_type="sliding" order="3" type="sliding" visible="false" weight="0.25" />
+      <window_info active="false" anchor="left" auto_hide="false" id="Web" internal_type="sliding" order="2" type="sliding" visible="false" weight="0.25" />
+      <window_info active="false" anchor="bottom" auto_hide="false" id="Cvs" internal_type="sliding" order="4" type="sliding" visible="false" weight="0.25" />
+      <window_info active="false" anchor="bottom" auto_hide="false" id="Message" internal_type="sliding" order="0" type="sliding" visible="false" weight="0.33" />
+    </layout>
+  </component>
+</project>
+

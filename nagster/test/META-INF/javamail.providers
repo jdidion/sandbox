@@ -1,0 +1,1 @@
+protocol=smtp; type=transport; class=net.didion.nagster.action.MockTransport;

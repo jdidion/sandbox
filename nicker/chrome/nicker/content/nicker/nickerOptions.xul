@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "chrome://nicker/locale/nicker.dtd">
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://mozapps/skin/pref/pref.css" type="text/css"?>
+<dialog buttons="accept, cancel" id="nicker-options-dialog" title="Nicker"
+	ondialogaccept="nicker_saveOptions()" onload="nicker_initializeOptions()"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="chrome://nicker/content/nickerOptions.js"/>
+	<vbox flex="1">
+        <groupbox>
+		<caption label="&nicker.options;"/>
+		<hbox>
+		<vbox>
+			<label control="nickerDomain" value="&nicker.domain;" />
+			<textbox id="nickerDomain" label="&nicker.domain;" prefstring="nicker.optDomain" />
+		    <label control="nickerAdminName" value="&admin.name;" />
+			<textbox id="nickerAdminName" label="&admin.name;" prefstring="nicker.optAdminName" />
+			<label control="nickerAdminPassword" value="&admin.password;" />
+			<textbox id="nickerAdminPassword" label="&admin.password;" prefstring="nicker.optAdminPassword" type="password"/>
+			<command id="cmd_enable_user_email" oncommand="toggle_user_email_disabled();" />
+			<checkbox id="nickerUserNotAdmin" label="&user.not.admin;" prefstring="nicker.optUserNotAdmin" command="cmd_enable_user_email"/>
+			<label control="nickerUserName" value="&user.name;" />
+			<textbox id="nickerUserName" label="&user.name;" prefstring="nicker.optUserName" disabled="true" />
+		</vbox>
+		</hbox>
+        </groupbox>  
+	</vbox>
+</dialog>

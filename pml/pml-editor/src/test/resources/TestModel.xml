@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties xmlns="http://www.didion.net/pml/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <name>Test</name>
+  <group>
+    <name>Happy</name>
+    <property>
+      <name>net.didion.test.foo</name>
+      <displayName>Foo</displayName>
+      <description>A kind of thing.</description>
+      <type>xs:string</type>
+      <minNumValues>1</minNumValues>
+      <maxNumValues>5</maxNumValues>
+      <defaultValues>Bingo</defaultValues>
+    </property>
+    <property>
+      <name>net.didion.test.bar</name>
+      <displayName>Bar</displayName>
+      <description>Another kind of thing.</description>
+      <type>xs:integer</type>
+      <minValue>4</minValue>
+      <maxValue>86</maxValue>
+      <minNumValues>0</minNumValues>
+      <maxNumValues>1</maxNumValues>
+    </property>
+  </group>
+  <group>
+    <name>Joy</name>
+    <property> 
+      <name>net.didion.test.baz</name>
+      <displayName>Baz</displayName>
+      <description>The best thing evar.</description>
+      <type>xs:boolean</type>
+      <defaultValues>true</defaultValues>
+    </property>
+    <property>
+      <name>net.didion.test.blorf</name>
+      <displayName>Blorf</displayName>
+      <description>A bad thing.</description>
+      <type format="dd/MM/yyyy">xs:date</type>
+      <allowedValues>
+        <values>9/11/2001</values>
+        <property>
+          <name>net.didion.test.blorf.numPlanes</name>
+          <displayName>Planes</displayName>
+          <description>Number of planes.</description>
+          <type>xs:short</type>
+          <minValue>2</minValue>
+          <maxValue>3</maxValue>
+        </property>
+      </allowedValues>
+      <allowedValues>
+        <values>10/24/1929</values>
+      </allowedValues>
+    </property>
+  </group>
+</properties>

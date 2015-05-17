@@ -1,0 +1,4 @@
+infile  input, '~/in.csv', :header? => true
+outfile output, '~/out.csv', :header? => true
+copy    input(1,2,4,3), output
+apply   output(3,4), proc {|x| Math.log10(x) }

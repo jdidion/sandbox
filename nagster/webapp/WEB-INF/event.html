@@ -1,0 +1,62 @@
+<html jwcid="shell">
+    <body>
+        <div class="head">Create/Edit Event <span jwcid="eventName">name</span> </div>
+        <div class="subhead">Schedules</div>
+        <span jwcid="ifHasSchedules">
+        <table class="data schedules" cellspacing="0">
+            <tr>
+                <th>start date</th>
+                <th>
+                schedule
+                </th>
+                <th>actions</th>
+            </tr>
+            <tr jwcid="schedules">
+                <td><span jwcid="scheduleStartDate"/></td>
+                <td><span jwcid="scheduleSummary"/></td>
+                <td><a jwcid="editSchedule">edit</a> <a jwcid="deleteSchedule">delete</a></td>
+            </tr>
+        </table>
+        </span>
+        <div><a jwcid="createSchedule">Add a Schedule</a></div>
+        <br/>
+        <div class="subhead">Alerts</div>
+        <span jwcid="ifHasAlerts">
+        <table class="data alerts" cellspacing="0">
+            <tr>
+                <th>group</th>
+                <th>type</th>
+                <th>parameters</th>
+                <th>actions</th>
+            </tr>
+            <span jwcid="alertGroups">
+                <tr>
+                <td colspan="3"><a jwcid="alertGroupName"/></td>
+                <td><a jwcid="createAlert">add</a> <a jwcid="deleteAlertGroup">delete</a></td>
+                </tr>
+                <tr jwcid="alerts">
+                    <td></td>
+                    <td><span jwcid="alertType"/></td>
+                    <td><span jwcid="alertParameters"/></td>
+                    <td><a jwcid="editAlert">edit</a> <a jwcid="deleteAlert">delete</a></td>
+                </tr>
+            </span>
+        </table>
+        </span>
+        <div class="subsubhead">Add a New Alert Group</div>
+        <form jwcid="addAlertGroupForm">
+            <input jwcid="eventId"/>
+            <table>
+            <tr><td>group name:</td><td><input jwcid="newGroupName"/></td></tr>
+            <tr><td>stop on first success:</td><td><input jwcid="firstSuccessfulOnly"/></td></tr>
+            </table>
+            <input type="submit" value="submit"/>
+        </form>
+        <br/>
+        <form jwcid="scheduleForm">
+            <input jwcid="scheduleEventId"/>
+            <input jwcid="scheduleButton"/>
+            <input jwcid="cancelButton"/>
+        </form>
+    </body>
+</html>

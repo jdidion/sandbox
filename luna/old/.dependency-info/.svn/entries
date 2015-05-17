@@ -1,0 +1,45 @@
+8
+
+dir
+2
+svn+ssh://spunkmonkey/home/svn/repos/projects/inactive/luna/old/.dependency-info
+svn+ssh://spunkmonkey/home/svn/repos
+
+
+
+2007-02-14T16:27:52.002540Z
+2
+john
+
+
+svn:special svn:externals svn:needs-lock
+
+-outtosrc-.i
+file
+
+
+
+
+2005-11-20T05:55:48.000000Z
+88a2378fbe53cd2a50b48893a7a8d6b3
+2007-02-14T16:27:52.002540Z
+2
+john
+has-props
+
+-timestamp-.i
+file
+
+
+
+
+2005-11-20T05:55:48.000000Z
+c99244fc0d4da894f79580940a5aa056
+2007-02-14T16:27:52.002540Z
+2
+john
+has-props
+
+com.humanbymistake
+dir
+

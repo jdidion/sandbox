@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+        targetNamespace="http://www.didion.net/pml-values/1.0" 
+        xmlns:tns="http://www.didion.net/pml-values/1.0" 
+        elementFormDefault="qualified">
+  <element name="propertyValues" type="tns:PropertyValueDescriptor"/>
+  <complexType name="PropertyValueDescriptor">
+    <sequence>
+      <element name="property" type="tns:Property" minOccurs="1" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <complexType name="Property">
+    <choice>
+      <element name="value" type="string" minOccurs="1" maxOccurs="1"/>
+      <element name="multivalue" type="tns:Multivalue" minOccurs="1" maxOccurs="1"/>
+    </choice>
+    <attribute name="name" type="string" use="required"/>
+  </complexType>
+  <complexType name="Multivalue">
+    <choice>
+      <sequence>
+        <element name="value" type="string" minOccurs="1" maxOccurs="unbounded"/>
+      </sequence>
+      <element name="numRange" type="tns:NumberRange"/>
+      <element name="dateRange" type="tns:DateRange"/>
+    </choice>
+  </complexType>
+  <complexType name="NumberRange">
+    <attribute name="min" type="decimal" use="required"/>
+    <attribute name="max" type="decimal" use="required"/>
+    <attribute name="step" type="decimal" default="1" use="optional"/>
+  </complexType>
+  <complexType name="DateRange">
+    <attribute name="min" type="dateTime" use="required"/>
+    <attribute name="max" type="dateTime" use="required"/>
+    <attribute name="step" type="int" default="1" use="optional"/>
+    <attribute name="unit" type="string"  default="day" use="optional"/>
+  </complexType>
+</schema>

@@ -1,0 +1,22 @@
+<html jwcid="shell">
+    <body>
+        <div class="head">Create/Edit Schedule</div>
+        <form jwcid="scheduleForm">
+            <input jwcid="eventId"/>
+            <input jwcid="scheduleId"/>
+            <table class="schedule data" cellspacing="0" width="400">
+            <tr><th>field</th><th>value</th></tr>
+            <tr><td>start date:</td><td><input jwcid="startDate"/></td></tr>
+            <tr><td>end date:</td><td><input jwcid="endDate"/></td></tr>
+            <tr><td>max occurances: (0 = no limit):</td><td><input jwcid="maxOccurances"/></td></tr>
+            <tr><td>minutes: (0-59):</td><td><input jwcid="minutes"/></td></tr>
+            <tr><td>hours (0-23):</td><td><input jwcid="hours"/></td></tr>
+            <tr><td>days (1-31):</td><td><input jwcid="days"/></td></tr>
+            <tr><td>months (0-11):</td><td><input jwcid="months"/></td></tr>
+            <tr><td>days of the week (1-7):</td><td><input jwcid="daysOfWeek"/></td></tr>
+            <tr><td>years (&lt;= 2069):</td><td><input jwcid="years"/></td></tr>
+            </table>
+            <input type="submit" value="submit"/>
+        </form>
+    </body>
+</html>

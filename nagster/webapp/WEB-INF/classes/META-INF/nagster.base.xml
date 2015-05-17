@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<module id="nagster.base" version="1.0.0">
+  <service-point id="CastingConfigurationObjectProvider"
+                 interface="org.apache.hivemind.service.ObjectProvider">
+    <create-instance class="net.didion.nagster.util.CastingConfigurationObjectProvider"/>
+  </service-point>
+
+  <contribution configuration-id="hivemind.ObjectProviders">
+    <provider prefix="cast" service-id="CastingConfigurationObjectProvider" />
+  </contribution>
+
+  <configuration-point id="Actions">
+    <schema>
+      <element name="action">
+        <attribute name="class" translator="instance" required="true"/>
+        <element name="param">
+          <attribute name="name" required="true"/>
+          <attribute name="value" required="true"/>
+          <conversion class="net.didion.nagster.util.NameValuePair"
+                      parent-method="addConfigurationParameter"/>
+        </element>
+        <rules>
+          <push-attribute attribute="class"/>
+          <invoke-parent method="addElement"/>
+        </rules>
+      </element>
+    </schema>
+  </configuration-point>
+
+  <service-point id="ActionManager" interface="net.didion.nagster.ActionManager">
+    <invoke-factory>
+      <construct class="net.didion.nagster.ActionManagerImpl">
+        <set-object property="actions" value="cast:Actions"/>
+      </construct>
+    </invoke-factory>
+  </service-point>
+
+  <service-point id="Store" interface="net.didion.nagster.Store"/>
+
+  <service-point id="Scheduler" interface="net.didion.nagster.Scheduler">
+    <invoke-factory>
+      <construct class="net.didion.nagster.SchedulerImpl">
+        <service>Store</service>
+        <service>ActionManager</service>
+        <int>${executor.threads}</int>
+      </construct>
+    </invoke-factory>
+  </service-point>
+
+  <service-point id="ResourceManager" interface="net.didion.nagster.ResourceManager">
+    <invoke-factory>
+      <construct class="net.didion.nagster.ResourceManagerImpl">
+        <service>Store</service>
+        <string>${resource.path}</string>
+      </construct>
+    </invoke-factory>
+  </service-point>
+
+  <service-point id="ApplicationManager" interface="net.didion.nagster.ApplicationManager">
+    <invoke-factory>
+      <construct class="net.didion.nagster.ApplicationManagerImpl">
+        <service>Store</service>
+      </construct>
+    </invoke-factory>
+  </service-point>
+</module>

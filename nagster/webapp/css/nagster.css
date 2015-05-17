@@ -1,0 +1,98 @@
+* {
+  font-family: arial;
+  font-size: 12px;
+}
+
+body {
+  background: lightgrey;
+}
+
+div.head {
+  font-size: 28px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+div.subhead {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+div.subsubhead {
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+div.calendar {
+  width: 800px;
+}
+
+table.data {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+table.schedule {
+  width: 400px;
+}
+
+table.data th {
+  border: 1px solid black;
+  background: olive;
+}
+
+table.data td {
+  border: 1px solid black;
+  padding: 2px 3px;
+  background: white;
+}
+
+div.section {
+  padding-top: 10px;
+}
+
+table.param {
+  border: 1px solid black;
+  background: white;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+table.param td.paramName {
+  font-weight: bold;
+  padding: 3px;
+  width: 100px;
+}
+
+table.param td.paramValue td {
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
+table.param td.paramValue td.radio {
+   width: 100px;
+}
+
+table.param td.paramValue td.value {
+   width: 120px;
+}
+
+.disabled {
+  color: lightgrey;
+}
+
+td.calcell {
+   vertical-align: top;
+}
+
+td.calcell ul {
+   padding: 0px;
+   padding-left: 15px;
+   margin: 2px;
+}

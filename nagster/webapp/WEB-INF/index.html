@@ -1,0 +1,66 @@
+<html jwcid="shell">
+    <body>
+        <div class="head">Scheduled Events</div>
+        <div class="calendar">
+            <table align="center" width="100%">
+                <tr>
+                    <td><a jwcid="prevMonth"><img jwcid="prevMonthImage"/></a></td>
+                    <td width="100%" align="center">
+                        <form jwcid="monthYearForm">
+                            <select jwcid="monthSelect"/>
+                            <input jwcid="yearField"/>
+                            <input type="submit" value="go"/>
+                        </form>
+                    </td>
+                    <td><a jwcid="nextMonth"><img jwcid="nextMonthImage"/></a></td>
+                </tr>
+            </table>
+            <table align="center" class="data" cellspacing="0">
+                <tr>
+                    <th width="14%">Sunday</th>
+                    <th width="14%">Monday</th>
+                    <th width="14%">Tuesday</th>
+                    <th width="14%">Wednesday</th>
+                    <th width="14%">Thursday</th>
+                    <th width="14%">Friday</th>
+                    <th width="14%">Saturday</th>
+                </tr>
+                <tr jwcid="calendarRow">
+                    <td class="calcell" jwcid="calendarCell">
+                        <span jwcid="day"/>
+                        <ul jwcid="eventLinks">
+                            <li><a jwcid="eventLink"><span jwcid="eventName"/></a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="section">
+            <div class="subhead">Add a New Event</div>
+            <form jwcid="newEventForm">
+                Name: <input jwcid="newEventName"/><input type="submit" value="create"/>
+            </form>
+        </div>
+        <div class="section">
+            <div class="subhead">Add a Resource</div>
+            <form jwcid="newResourceForm">
+                <table>
+                <tr><td>Name:</td><td><input jwcid="newResourceName"/></td></tr>
+                <tr><td>File:</td><td><input jwcid="newResourceFile" type="file"/></td></tr>
+                </table>
+                <input type="submit" value="create"/>
+            </form>
+        </div>
+        <div class="section">
+            <div class="subhead">Add an Application</div>
+            <form jwcid="newApplicationForm">
+                <table>
+                <tr><td>Name:</td><td><input jwcid="newApplicationName"/></td></tr>
+                <tr><td>File:</td><td><input jwcid="newApplicationFile" type="file"/></td></tr>
+                <tr><td>Parameters:</td><td><input jwcid="newApplicationParams"/></td></tr>
+                </table>
+                <input type="submit" value="create"/>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="nagster" default="test" basedir=".">
+  <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+
+  <property file="build.properties"/>
+  <property file="lib.properties"/>
+
+  <patternset id="compiler.resources">
+    <include name="**/?*.properties"/>
+    <include name="**/?*.xml"/>
+    <include name="**/?*.html"/>
+    <include name="**/?*.gif"/>
+    <include name="**/?*.png"/>
+    <include name="**/?*.jpeg"/>
+    <include name="**/?*.jpg"/>
+  </patternset>
+
+  <path id="project.jdk.classpath">
+    <fileset dir="${project.jdk.home}/jre/lib">
+      <include name="*.jar"/>
+    </fileset>
+  </path>
+
+  <path id="compile.classpath">
+    <path refid="project.jdk.classpath"/>
+    <path path="${commons-logging.lib}"/>
+    <path path="${freetts.lib}"/>
+    <path path="${mail.lib}"/>
+    <path path="${jtapi.lib}"/>
+    <path path="${servlet.lib}"/>
+    <path path="${hivemind.lib}"/>
+    <path path="${prevayler.lib}"/>
+    <path path="${tapestry.lib}"/>
+  </path>
+
+  <path id="test.classpath">
+    <path refid="compile.classpath"/>
+    <path path="${junit.lib}"/>
+  </path>
+
+  <path id="run.classpath">
+    <path path="${jetty.lib}"/>
+  </path>
+
+  <property name="conf.dir" value="${basedir}/conf"/>
+  <property name="src.dir" value="${basedir}/src"/>
+  <property name="test.src.dir" value="${basedir}/test"/>
+  <property name="scratch.dir" value="${basedir}/tmp"/>
+  <property name="class.dir" value="${scratch.dir}/classes"/>
+  <property name="test.class.dir" value="${scratch.dir}/test/classes"/>
+  <property name="dist.dir" value="${basedir}/dist"/>
+  <property name="webapp.dir" value="${basedir}/webapp"/>
+  <property name="webapp.lib.dir" value="${webapp.dir}/WEB-INF/lib"/>
+
+  <property name="jetty.start.args"
+            value="${jetty.home}/etc/admin.xml ${jetty.home}/etc/jetty.xml ${scratch.dir}/nagster-jetty.xml"/>
+
+  <target name="clean">
+    <delete dir="${scratch.dir}"/>
+    <delete dir="${dist.dir}"/>
+  </target>
+
+  <target name="compile">
+    <mkdir dir="${dist.dir}"/>
+    <mkdir dir="${class.dir}"/>
+    <javac destdir="${class.dir}"
+           srcdir="${src.dir}"
+           debug="${compiler.debug}"
+           nowarn="${compiler.generate.no.warnings}"
+           memoryMaximumSize="${compiler.max.memory}"
+           fork="true"
+           executable="${project.jdk.home}/bin/javac">
+      <compilerarg line="${compiler.args}"/>
+      <classpath refid="compile.classpath"/>
+    </javac>
+    <copy todir="${class.dir}">
+      <fileset dir="${src.dir}">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+    <jar basedir="${class.dir}"
+         destfile="${dist.dir}/nagster-core.jar"/>
+  </target>
+
+  <target name="copy-libs">
+    <pathconvert property="libs" pathsep=",">
+      <path refid="compile.classpath"/>
+    </pathconvert> 
+    <for list="${libs}"
+             param="lib">
+      <sequential>
+        <copy todir="${webapp.lib.dir}"
+              file="@{lib}"/>
+      </sequential>
+    </for>
+  </target>
+
+  <target name="test" depends="compile">
+    <mkdir dir="${test.class.dir}"/>
+    <javac destdir="${test.class.dir}"
+           debug="${compiler.debug}"
+           nowarn="${compiler.generate.no.warnings}"
+           memoryMaximumSize="${compiler.max.memory}"
+           fork="true"
+           executable="${project.jdk.home}/bin/javac"
+           srcdir="${test.src.dir}">
+      <compilerarg line="${compiler.args}"/>
+      <classpath refid="test.classpath"/>
+      <classpath>
+        <fileset dir="${dist.dir}"/>
+      </classpath>
+    </javac>
+    <copy todir="${test.class.dir}">
+      <fileset dir="${test.src.dir}">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+    <junit fork="true"
+           failureproperty="test.fail"
+           jvm="${project.jdk.home}/bin/java"
+           printsummary="true">
+      <classpath>
+        <path refid="test.classpath"/>
+        <path path="${class.dir}"/>
+        <path path="${test.class.dir}"/>
+      </classpath>
+      <formatter type="plain" usefile="false"/>
+      <batchtest>
+        <fileset dir="${test.class.dir}">
+          <include name="**/*Test*.class"/>
+          <exclude name="**/*Mock*.class"/>
+          <exclude name="**/*Base*.class"/>
+        </fileset>
+      </batchtest>
+    </junit>
+    <fail if="test.fail"/>
+  </target>
+
+  <target name="start" depends="compile">
+    <copy todir="${scratch.dir}" file="${conf.dir}/nagster-jetty.xml">
+      <filterset>
+        <filter token="basedir" value="${basedir}"/>
+      </filterset>
+    </copy>
+    <java jar="${jetty.start.lib}"
+          fork="yes"
+          failonerror="yes">
+      <classpath>
+        <path refid="run.classpath" />
+      </classpath>
+      <arg line="${jetty.start.args}"/>
+    </java>
+  </target>
+
+  <target name="stop" depends="compile">
+    <java jar="${jetty.stop.lib}"
+          fork="yes"
+          failonerror="yes">
+      <classpath>
+        <path refid="run.classpath" />
+      </classpath>
+    </java>
+  </target>
+
+</project>

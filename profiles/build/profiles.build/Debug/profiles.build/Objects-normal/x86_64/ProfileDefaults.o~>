@@ -1,0 +1,281 @@
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults syncWithDisk]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:88: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:88: error: (Each undeclared identifier is reported only once
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:88: error: for each function it appears in.)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults cpuInterval]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:100: error: 'kCPUIntervalPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:101: error: 'kCPUUpdateIntervalMin' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:102: error: 'kCPUUpdateIntervalMax' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:103: error: 'kCPUUpdateIntervalDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults cpuDisplayMode]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:107: error: 'kCPUDisplayModePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:108: error: 'kCPUDisplayPercent' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:108: error: 'kCPUDisplayGraph' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:108: error: 'kCPUDisplayThermometer' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:110: error: 'kCPUDisplayDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults cpuPercentDisplay]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:114: error: 'kCPUPercentDisplayPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:115: error: 'kCPUPercentDisplayLarge' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:116: error: 'kCPUPercentDisplaySplit' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:117: error: 'kCPUPercentDisplayDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults cpuGraphLength]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:121: error: 'kCPUGraphLengthPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:122: error: 'kCPUGraphWidthMin' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:123: error: 'kCPUGraphWidthMax' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:124: error: 'kCPUGraphWidthDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults cpuAvgAllProcs]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:128: error: 'kCPUAvgAllProcsPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:128: error: 'kCPUAvgAllProcsDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults cpuPowerMate]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:132: error: 'kCPUPowerMatePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:132: error: 'kCPUPowerMateDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults cpuPowerMateMode]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:136: error: 'kCPUPowerMateMode' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:137: error: 'kCPUPowerMateGlow' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:138: error: 'kCPUPowerMateInversePulse' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:139: error: 'kCPUPowerMateModeDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults cpuSystemColor]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:143: error: 'kCPUSystemColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:143: error: 'kCPUSystemColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults cpuUserColor]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:147: error: 'kCPUUserColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:147: error: 'kCPUUserColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveCpuInterval:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:151: error: 'kCPUIntervalPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveCpuDisplayMode:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:155: error: 'kCPUDisplayModePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveCpuPercentDisplay:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:159: error: 'kCPUPercentDisplayPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveCpuGraphLength:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:163: error: 'kCPUGraphLengthPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveCpuAvgAllProcs:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:167: error: 'kCPUAvgAllProcsPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveCpuPowerMate:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:171: error: 'kCPUPowerMatePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveCpuPowerMateMode:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:175: error: 'kCPUPowerMateMode' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveCpuSystemColor:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:179: error: 'kCPUSystemColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveCpuUserColor:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:183: error: 'kCPUUserColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults diskInterval]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:193: error: 'kDiskIntervalPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:194: error: 'kDiskUpdateIntervalMin' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:195: error: 'kDiskUpdateIntervalMax' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:196: error: 'kDiskUpdateIntervalDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults diskImageset]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:200: error: 'kDiskImageSetPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:201: error: 'kDiskImageSetDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:202: error: 'kDiskImageSets' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults diskSelectMode]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:207: error: 'kDiskSelectModePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:208: error: 'kDiskSelectModeOpen' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:209: error: 'kDiskSelectModeEject' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:210: error: 'kDiskSelectModeDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults diskSpaceForceBaseTwo]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:214: error: 'kDiskSpaceForceBaseTwoPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:215: error: 'kDiskSpaceForceBaseTwoDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveDiskInterval:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:219: error: 'kDiskIntervalPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveDiskImageset:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:223: error: 'kDiskImageSetPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveDiskSelectMode:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:227: error: 'kDiskSelectModePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults memInterval]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:237: error: 'kMemIntervalPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:238: error: 'kMemUpdateIntervalMin' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:239: error: 'kMemUpdateIntervalMax' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:240: error: 'kMemUpdateIntervalDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults memDisplayMode]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:244: error: 'kMemDisplayModePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:245: error: 'kMemDisplayPie' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:246: error: 'kMemDisplayNumber' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:247: error: 'kMemDisplayDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults memPageIndicator]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:251: error: 'kMemPageIndicatorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:251: error: 'kMemPageIndicatorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults memUsedFreeLabel]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:255: error: 'kMemUsedFreeLabelPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:255: error: 'kMemUsedFreeLabelDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults memGraphLength]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:259: error: 'kMemGraphLengthPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:260: error: 'kMemGraphWidthMin' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:261: error: 'kMemGraphWidthMax' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:262: error: 'kMemGraphWidthDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults memFreeColor]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:266: error: 'kMemFreeColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:266: error: 'kMemFreeColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults memUsedColor]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:270: error: 'kMemUsedColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:270: error: 'kMemUsedColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults memActiveColor]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:274: error: 'kMemActiveColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:274: error: 'kMemActiveColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults memInactiveColor]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:278: error: 'kMemInactiveColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:278: error: 'kMemInactiveColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults memWireColor]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:282: error: 'kMemWireColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:282: error: 'kMemWireColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults memPageInColor]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:286: error: 'kMemPageInColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:286: error: 'kMemPageInColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults memPageOutColor]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:290: error: 'kMemPageOutColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:290: error: 'kMemPageOutColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults memPageRateColor]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:294: error: 'kMemPageRateColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:294: error: 'kMemPageRateColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveMemInterval:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:298: error: 'kMemIntervalPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveMemDisplayMode:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:302: error: 'kMemDisplayModePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveMemUsedFreeLabel:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:306: error: 'kMemUsedFreeLabelPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveMemPageIndicator:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:310: error: 'kMemPageIndicatorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveMemGraphLength:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:314: error: 'kMemGraphLengthPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveMemFreeColor:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:318: error: 'kMemFreeColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveMemUsedColor:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:322: error: 'kMemUsedColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveMemActiveColor:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:326: error: 'kMemActiveColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveMemInactiveColor:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:330: error: 'kMemInactiveColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveMemWireColor:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:334: error: 'kMemWireColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveMemPageInColor:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:338: error: 'kMemPageInColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveMemPageOutColor:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:342: error: 'kMemPageOutColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveMemPagerateColor:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:346: error: 'kMemPageRateColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults netInterval]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:356: error: 'kNetIntervalPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:357: error: 'kNetUpdateIntervalMin' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:358: error: 'kNetUpdateIntervalMax' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:359: error: 'kNetUpdateIntervalDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults netDisplayMode]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:363: error: 'kNetDisplayModePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:364: error: 'kNetDisplayThroughput' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:364: error: 'kNetDisplayGraph' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:364: error: 'kNetDisplayArrows' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:366: error: 'kNetDisplayDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults netDisplayOrientation]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:370: error: 'kNetDisplayOrientationPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:371: error: 'kNetDisplayOrientTxRx' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:372: error: 'kNetDisplayOrientRxTx' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:373: error: 'kNetDisplayOrientationDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults netScaleMode]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:377: error: 'kNetScaleModePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:378: error: 'kNetScaleInterfaceSpeed' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:379: error: 'kNetScalePeakTraffic' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:380: error: 'kNetScaleDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults netScaleCalc]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:384: error: 'kNetScaleCalcPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:385: error: 'kNetScaleCalcLinear' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:386: error: 'kNetScaleCalcLog' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:387: error: 'kNetScaleCalcDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults netThroughputLabel]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:391: error: 'kNetThroughputLabelPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:391: error: 'kNetThroughputLabelDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults netThroughput1KBound]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:395: error: 'kNetThroughput1KBoundPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:395: error: 'kNetThroughput1KBoundDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults netGraphStyle]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:399: error: 'kNetGraphStylePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:400: error: 'kNetGraphStyleStandard' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:401: error: 'kNetGraphStyleInverseOpposed' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:402: error: 'kNetGraphStyleDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults netGraphLength]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:406: error: 'kNetGraphLengthPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:407: error: 'kNetGraphWidthMin' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:408: error: 'kNetGraphWidthMax' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:409: error: 'kNetGraphWidthDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults netTransmitColor]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:413: error: 'kNetTransmitColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:413: error: 'kNetTransmitColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults netReceiveColor]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:417: error: 'kNetReceiveColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:417: error: 'kNetReceiveColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults netInactiveColor]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:421: error: 'kNetInactiveColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:421: error: 'kNetInactiveColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults netPreferInterface]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:425: error: 'kNetPreferInterfacePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:425: error: 'kNetPrimaryInterface' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveNetInterval:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:429: error: 'kNetIntervalPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveNetDisplayMode:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:433: error: 'kNetDisplayModePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveNetDisplayOrientation:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:437: error: 'kNetDisplayOrientationPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveNetScaleMode:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:441: error: 'kNetScaleModePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveNetScaleCalc:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:445: error: 'kNetScaleCalcPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveNetThroughputLabel:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:449: error: 'kNetThroughputLabelPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveNetThroughput1KBound:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:453: error: 'kNetThroughput1KBoundPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveNetGraphStyle:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:457: error: 'kNetGraphStylePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveNetGraphLength:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:461: error: 'kNetGraphLengthPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveNetTransmitColor:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:465: error: 'kNetTransmitColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveNetReceiveColor:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:469: error: 'kNetReceiveColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveNetInactiveColor:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:473: error: 'kNetInactiveColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveNetPreferInterface:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:477: error: 'kNetPreferInterfacePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults migratePrefFile]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:505: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:506: error: 'kMenuMeterObsoleteDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:512: warning: 'movePath:toPath:handler:' is deprecated (declared at /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h:173)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults migratePrefsForward]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:524: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:541: error: 'kNetDisplayModePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:578: error: 'kCPUPercentDisplayPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:578: error: 'kCPUPercentDisplaySplit' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:580: error: 'kCPUPercentDisplaySmall' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:602: error: 'kMemInactiveColorDefault' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:606: error: 'kMemDisplayModePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:645: error: 'kNetReceiveColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:661: error: 'kNetTransmitColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:684: error: 'kMemPageInColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:700: error: 'kMemPageOutColorPref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:740: error: 'kNetPreferInterfacePref' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults loadDoublePref:lowBound:highBound:defaultValue:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:785: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveDoublePref:value:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:807: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults loadIntPref:lowBound:highBound:defaultValue:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:817: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveIntPref:value:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:836: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults loadBitFlagPref:validFlags:zeroValid:defaultValue:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:846: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveBitFlagPref:value:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:865: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults loadBoolPref:defaultValue:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:874: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveBoolPref:value:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:889: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults loadColorPref:defaultValue:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:898: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveColorPref:value:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:913: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults loadStringPref:defaultValue:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:922: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m: In function '-[ProfileDefaults saveStringPref:value:]':
+/Volumes/secure/projects/profiles/profiles/ProfileDefaults.m:940: error: 'kMenuMeterDefaultsDomain' undeclared (first use in this function)
+{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_SUP_REFS_$_0
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_1
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_2
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_3
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_4

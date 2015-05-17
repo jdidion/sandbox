@@ -1,0 +1,15 @@
+<!ENTITY  nicker.menuitem       "Use alias">
+<!ENTITY  nicker.accesskey    	"U">
+
+<!ENTITY  about.title           "Nicker - About">
+<!ENTITY  created.by            "Created By:">
+<!ENTITY  homepage              "Home Page">
+<!ENTITY  mail                  "E-mail">
+<!ENTITY  close.button          "Close">
+
+<!ENTITY  nicker.options        "Nicker Options">
+<!ENTITY  nicker.domain			"Google Apps domain">
+<!ENTITY  admin.name   			"Google Apps domain administrator name">
+<!ENTITY  admin.password	    "Google Apps domain administrator password">
+<!ENTITY  user.not.admin    	"Assign nicknames to a different account">
+<!ENTITY  user.name		    	"Nicknamed account">

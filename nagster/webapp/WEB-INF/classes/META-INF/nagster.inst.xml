@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<module id="nagster.inst" version="1.0.0">
+  <contribution configuration-id="nagster.base.Actions">
+    <action class="net.didion.nagster.action.BeepAction"/>
+    <action class="net.didion.nagster.action.EmailAction">
+      <param name="host" value="mail.didion.net"/>
+      <param name="username" value="john"/>
+      <param name="password" value="fat.dog"/>
+    </action>
+    <action class="net.didion.nagster.action.ExecAction"/>
+    <action class="net.didion.nagster.action.IMAction">
+      <param name="host" value="jabber.org"/>
+      <param name="username" value="nagster@nagster.com"/>
+      <param name="password" value="n4g57rRu1z"/>
+    </action>
+    <action class="net.didion.nagster.action.PlayerAction"/>
+    <action class="net.didion.nagster.action.PopupWindowAction"/>
+  </contribution>
+
+  <contribution configuration-id="hivemind.ApplicationDefaults">
+    <default symbol="resource.path" value="resources"/>
+    <default symbol="executor.threads" value="5"/>
+  </contribution>
+
+  <implementation service-id="nagster.base.Store">
+    <invoke-factory>
+      <construct class="net.didion.nagster.store.PrevaylerStore">
+        <string>db</string>
+      </construct>
+    </invoke-factory>
+  </implementation>
+</module>

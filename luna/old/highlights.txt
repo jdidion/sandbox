@@ -1,0 +1,71 @@
+Luna: Developer Overview
+
+There are several important concepts that a developer should know about Luna at the outset. Overall, the developer should find Luna similar to Lisp in many respects. But it would be a mistake for the developer to think that Luna is just Lisp in XML. Let's take a look at some of the major points:
+
+1. Luna is first and foremost a parse tree grammar
+
+Luna is designed to be a target grammar for lexical analyzers. This means that developers can create their own syntax and then write a lexical analyzer to transform it into a Luna parse tree. However, since Luna is encoded in XML, it is also possible to write Luna code directly without the intermediate lexical analysis step. This is generally not possible in most languages, as they are designed at the syntax level rather than the parse tree level. All Luna tools, interpreters, and compilers will be targeted at the parse tree level, so any code that can be translated into a Luna parse tree can take advantage of those tools.
+
+2. Luna is late-bound, object-oriented, and dynamic
+
+* Late-bound means that look-ups are done at runtime. When a method is called on an object, for example, that method is looked up by name at run-time.
+
+* Object-oriented means that related methods and properties can be encapsulated by objects. In Luna, there is no concept of a class. Objects are created as instances of other objects, and properties and methods can be added to an object to extend its parent's functionality.
+
+* Dynamic means that code can be modified at run-time. While many interpreted languages call themselves dynamic, this typically just means that new variables, methods and objects can be introduced into the system at runtime, or can be redefined or removed. Very few languages allow run-time modification of "live" objects, as Luna does. For example, if you have an in-memory object called Foo, and you want to add the Baz method to it, with Luna there is no need to replace the object. You can simply add the method to the object (or to the object's parent if you want the method available to all instances of Foo's parent).
+
+As you can see, programming in Luna puts a lot of demands on the developer. In exchange, Luna gives the developer a great deal of freedom, and makes it very easy for developers to rapidly test, modify, and redeploy their code.
+
+3. Everything is a map
+
+A map relates a set of keys to a set of values. Luna uses map as its base data type because it is possible to describe all other data types as specializations of map. Trees are nested maps. Lists are maps with sequential integer keys. Numbers are lists of digits. While it is by no means necessary or even recommended to implement Luna datatypes as specializations of map in the interpreter, it is very powerful to provide this facility at the language level.
+
+4. Everything is an expression
+
+Luna, like Lisp, makes no distinction between expressions and statements. Everything is an expression. Luna implicitly evaluates every expression. 
+
+5. Luna leaves does as much work as possible at runtime
+
+As evidenced by point #2, Luna leaves as much as it can to the last possible moment. As a further example, consider that Luna makes no distinctions between fields and methods within an object. An object is just a specialization of map, so all fields and methods are stored by name in the same map. Luna leaves it up to the programmer to use good naming practices to distinguish between the two. Therefore, it is entirely possible to apply the value of a field to a set of aguments...just don't expect good results.
+
+6. Luna is designed to be extended
+
+The Luna specification defines the smallest possible number of keywords and build-in types and methods. Reason being: Luna is designed with the serious developer in mind. We know enough developers, and have developed for long enough ourselves, to know that everyone had different opinions about what makes a good language. Luna gives developers just enough to build pretty much whatever they need.
+
+The most powerful tool by far for extending Luna is the macro. Macros are shortcuts - programs that generate code at runtime to replace a call to a macro. For example, while can be written as a macro, as the following pseudo-code demonstrates:
+
+start:
+if [condition is true] then
+    ...do stuff...
+    goto start
+end if
+
+so writing:
+
+while [x < 5]
+    print x
+    x = x + 1
+end while
+
+expands at runtime to:
+
+start:
+if [x < 5] then
+    print x
+    x = x + 1
+    goto start
+end if
+
+In this way, features can be added to the language as needed, without locking developers into syntax or implementations they may not like. That said, it is intended that a robust library of objects and macros will be made available to developers who do not wish to "reinvent the for-loop."
+
+7. Luna is designed to be persistent
+
+All objects have a property on them called "persist," which is set to true by default. Interpreters/compilers that choose to implement the Luna persistence specification will automatically write to disk those object that desire persistence.
+
+8. Luna is designed to be networked
+
+All objects have a universally unique identifier. This means that, given the appropritate protocols, any object on any interpreter on any machine in the world can be accessed from anywhere using that object's id.
+
+9. Luna parse trees can be edited on the fly
+
+Another powerful tool luna provides is the "parse" keyword. Calling parse on any quoted expression generates a ptree - a special type of tree for holding parse data. A ptree gives the developer access to the elements and attributes that make up Luna code. The developer can modify and re-interpret any code on the fly.

@@ -1,0 +1,36 @@
+<html jwcid="shell">
+    <body>
+        <div class="head">Create/Edit Alert</div>
+        <form jwcid="actionForm">
+            <input jwcid="actionEventId"/>
+            <input jwcid="actionAlertGroupId"/>
+            <input jwcid="actionAlertId"/>
+            <div class="subhead">Action:</div> <select jwcid="actionSelect"/>
+        </form>
+        <br/>
+        <div class="subhead">Parameters:</div>
+        <form jwcid="parameterForm">
+            <input jwcid="operation"/>
+            <input jwcid="parameterEventId"/>
+            <input jwcid="parameterAlertGroupId"/>
+            <input jwcid="parameterAlertId"/>
+            <span jwcid="parameterDescriptors">
+                <table class="param" cellpadding="0" cellspacing="0">
+                <tr>
+                <td class="paramName" valign="top"><span jwcid="parameterName"/>:</td>
+                <td valign="top" class="paramValue">
+                    <input jwcid="parameterValueType">
+                    <table cellpadding="0" cellspacing="0">
+                    <tr><td class="radio"><input jwcid="textValueType" onchange="javascript:this.form['operation'].value='reload';this.form.submit();"/><span jwcid="textValueLabel"/></td><td class="value"><span jwcid="isField"><input jwcid="textValueField"/></span><span jwcid="isSelect"><select jwcid="textValueSelect"/></span></td></tr>
+                    <tr><td class="radio"><input jwcid="resourceValueType" onchange="javascript:this.form['operation'].value='reload';this.form.submit();"/><span jwcid="resourceLabel"/></td><td class="value"><select jwcid="resourceSelect"/></td></tr>
+                    <tr><td class="radio"><input jwcid="applicationValueType" onchange="javascript:this.form['operation'].value='reload';this.form.submit();"/><span jwcid="applicationLabel"/></td><td class="value"><select jwcid="applicationSelect"/></td></tr>
+                    </table>
+                    </input>
+                </td>
+                </tr>
+                </table>
+            </span>
+            <input type="submit" value="submit"/>
+        </form>
+    </body>
+</html>

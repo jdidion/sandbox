@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification
+    PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN"
+    "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd">
+
+<page-specification class="net.didion.nagster.tapestry.page.EventPage">
+  <description>Nagster Create/Edit Event Page</description>
+
+  <context-asset name="css" path="/css/nagster.css"/>
+
+  <bean name="delegate" class="org.apache.tapestry.valid.ValidationDelegate"/>
+
+  <component id="shell" type="Shell">
+    <static-binding name="title" value="Nagster > Create/Edit Event"/>
+    <binding name="stylesheet" expression="assets.css"/>
+  </component>
+  <component id="eventName" type="Insert">
+    <binding name="value" expression="eventName"/>
+  </component>
+  <component id="ifHasSchedules" type="Conditional">
+    <binding name="condition" expression="!event.schedules.empty"/>
+  </component>
+  <component id="schedules" type="Foreach">
+    <binding name="source" expression="event.schedules"/>
+    <static-binding name="element" value="tr"/>
+  </component>
+  <component id="scheduleStartDate" type="Insert">
+    <binding name="value" expression="components.schedules.value.startDateAsString"/>
+  </component>
+  <component id="scheduleSummary" type="Insert">
+    <binding name="value" expression="components.schedules.value.summaryString"/>
+  </component>
+  <component id="createSchedule" type="DirectLink">
+    <binding name="listener" expression="listeners.createSchedule"/>
+    <binding name="parameters" expression="eventId"/>
+  </component>
+  <component id="editSchedule" type="DirectLink">
+    <binding name="listener" expression="listeners.editSchedule"/>
+    <binding name="parameters" expression="{eventId,components.schedules.value.id}"/>
+  </component>
+  <component id="deleteSchedule" type="DirectLink">
+    <binding name="listener" expression="listeners.deleteSchedule"/>
+    <binding name="parameters" expression="{eventId,components.schedules.value.id}"/>
+  </component>
+  <component id="ifHasAlerts" type="Conditional">
+    <binding name="condition" expression="!event.alertGroups.empty"/>
+  </component>
+  <component id="alertGroups" type="Foreach">
+    <binding name="source" expression="event.alertGroups"/>
+  </component>
+  <component id="alertGroupName" type="Insert">
+    <binding name="value" expression="components.alertGroups.value.name"/>
+  </component>
+  <component id="deleteAlertGroup" type="DirectLink">
+    <binding name="listener" expression="listeners.deleteAlertGroup"/>
+    <binding name="parameters" expression="{eventId,components.alertGroups.value.id}"/>
+  </component>
+  <component id="alerts" type="Foreach">
+    <binding name="source" expression="components.alertGroups.value.alerts"/>
+  </component>
+  <component id="alertType" type="Insert">
+    <binding name="value" expression="components.alerts.value.actionDescriptor.name"/>
+  </component>
+  <component id="alertParameters" type="Insert">
+    <binding name="value" expression="components.alerts.value.parametersAsString"/>
+  </component>
+  <component id="createAlert" type="DirectLink">
+    <binding name="listener" expression="listeners.createAlert"/>
+    <binding name="parameters" expression="{eventId,components.alertGroups.value.id}"/>
+  </component>
+  <component id="editAlert" type="DirectLink">
+    <binding name="listener" expression="listeners.editAlert"/>
+    <binding name="parameters" expression="{eventId,components.alertGroups.value.id,components.alerts.value.id}"/>
+  </component>
+  <component id="deleteAlert" type="DirectLink">
+    <binding name="listener" expression="listeners.deleteAlert"/>
+    <binding name="parameters" expression="{eventId,components.alertGroups.value.id,components.alerts.value.id}"/>
+  </component>
+  <component id="addAlertGroupForm" type="Form">
+    <binding name="delegate" expression="beans.delegate"/>
+    <binding name="listener" expression="listeners.addAlertGroup"/>
+  </component>
+  <component id="eventId" type="Hidden">
+    <binding name="value" expression="eventId"/>
+  </component>
+  <component id="newGroupName" type="TextField">
+    <binding name="value" expression="alertGroupName"/>
+  </component>
+  <component id="firstSuccessfulOnly" type="Checkbox">
+    <binding name="selected" expression="firstSuccessfulOnly"/>
+  </component>
+  <component id="scheduleForm" type="Form">
+    <binding name="delegate" expression="beans.delegate"/>
+  </component>
+  <component id="scheduleEventId" type="Hidden">
+    <binding name="value" expression="eventId"/>
+  </component>
+  <component id="scheduleButton" type="Submit">
+    <static-binding name="label" value="Schedule Event"/>
+    <binding name="listener" expression="listeners.scheduleEvent"/>
+  </component>
+  <component id="cancelButton" type="Submit">
+    <static-binding name="label" value="Cancel"/>
+    <binding name="listener" expression="listeners.cancel"/>
+  </component>
+</page-specification>

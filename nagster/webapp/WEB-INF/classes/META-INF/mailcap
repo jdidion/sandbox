@@ -1,0 +1,4 @@
+audio/*;;   play=net.didion.nagster.player.SoundPlayer
+audio/*;;   play-and-wait=net.didion.nagster.player.SoundPlayer
+text/*;;    play=net.didion.nagster.player.TextToSpeechPlayer
+text/*;;    play-and-wait=net.didion.nagster.player.TextToSpeechPlayer

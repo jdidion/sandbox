@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "chrome://nicker/locale/nicker.dtd">
+<overlay id="NickerOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="chrome://nicker/content/nickerOverlay.js"/>
+	<popup id="contentAreaContextMenu">
+		<menuseparator id="nickerseparator" hidden="true" insertafter="context-selectAll" />
+		<menuitem id="nicker"  label="&nicker.menuitem;" accesskey="&nicker.accesskey;" hidden="true" oncommand="Nicker();"/>
+	</popup>
+</overlay>

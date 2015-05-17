@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4" relativePaths="false">
+  <component name="ModuleRootManager" version="2">
+    <jdk name="java version &quot;1.4.1_01&quot;" />
+    <projectPath>
+      <root type="composite">
+        <root type="simple" url="file://$MODULE_DIR$" />
+      </root>
+    </projectPath>
+    <sourcePath>
+      <root type="composite">
+        <root type="simple" url="file://$MODULE_DIR$/src" />
+        <root type="jdk" rootType="sourcePath" name="java version &quot;1.4.1_01&quot;" />
+        <root type="simple" url="file://$MODULE_DIR$/test" />
+      </root>
+    </sourcePath>
+    <classPath>
+      <root type="composite">
+        <root type="jdk" rootType="classPath" name="java version &quot;1.4.1_01&quot;" />
+        <root type="output" />
+        <root type="simple" url="jar://C:/java/junit/junit.jar!/" />
+      </root>
+    </classPath>
+    <excludePath>
+      <root type="composite">
+        <root type="excludedOutput" />
+      </root>
+    </excludePath>
+    <javadocPath>
+      <root type="composite">
+        <root type="jdk" rootType="javadocPath" name="java version &quot;1.4.1_01&quot;" />
+      </root>
+    </javadocPath>
+    <assert_keyword enabled="no" />
+    <exclude_output enabled="yes" />
+  </component>
+  <component name="NewModuleRootManager">
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="sourceFolder" forTests="true" />
+  </component>
+</module>
+

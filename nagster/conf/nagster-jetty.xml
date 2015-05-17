@@ -1,0 +1,10 @@
+<Configure class="org.mortbay.jetty.Server">
+  <Call name="addWebApplication">
+    <Arg>/nagster</Arg>
+    <Arg>@basedir@/webapp</Arg>
+
+    <Set name="extractWAR">false</Set>
+    <Set name="defaultsDescriptor">org/mortbay/jetty/servlet/webdefault.xml</Set>
+    <Set name="classLoaderJava2Compliant">true</Set>
+  </Call>
+</Configure>

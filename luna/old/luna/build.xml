@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="TheProject" default="test" basedir=".">
+
+  <property name="src"         value="src"/>
+  <property name="jars"        value="jars"/>
+  <property name="classes"     value="classes"/>
+  <property name="test.class"  value="com.humanbymistake.TestRunner"/>
+
+  <target name="clean">
+    <delete dir="${classes}"/>
+  </target>
+
+  <target name="init">
+    <tstamp/>
+    <mkdir dir="${classes}"/>
+  </target>
+
+  <target name="compile" depends="init">
+    <javac destdir="${classes}" srcdir="${src}" debug="on">
+      <classpath>
+        <fileset dir="${jars}">
+          <include name="*.jar"/>
+        </fileset>
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="test" depends="compile">
+    <java classname="${test.class}" fork="yes">
+      <classpath>
+        <pathelement path="${classes}"/>
+        <fileset dir="${jars}">
+          <include name="*.jar"/>
+        </fileset>
+      </classpath>
+    </java>
+  </target>
+
+</project>

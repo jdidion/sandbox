@@ -1,0 +1,112 @@
+1. object creation 
+
+<set>
+	<Joe/>
+	<create>
+		<Human/>
+		"Joe"
+	</create>
+</set>
+
+2. method creation
+
+<set>
+	<Joe><say/></Joe>
+	<lambda>
+		<args><x/></args>
+		<print><x/></print>
+	</lambda>
+</set>
+
+3. method value access
+
+<Joe><say/></Joe>
+
+and
+
+<get>
+	<Joe/>
+	<say/>
+</get>
+
+	both return
+
+	<lambda>
+		<args><x/></args>
+		<print><x/></print>
+	</lambda>
+
+4. method evaluation
+
+<Joe><say>Hello</say></Joe>
+
+and
+
+<eval>
+	<get>
+		<Joe/>
+		<say/>
+	</get>
+	"Hello"
+</eval>
+
+	both return <NIL/> and cause the side effect of "Hello" being printed to the standard output
+	
+5. lists
+
+<set>
+	<Joe><nick-names/></Joe>
+	<list>
+		"dipshit"
+		"fuckwad"
+		"fruitcake"
+	</list>
+</set>
+
+<Joe><nick-names/></Joe>
+
+	returns 
+	
+	<list>
+		"dipshit"
+		"fuckwad"
+		"fruitcake"
+	</list>
+	
+<get>
+	<Joe><nick-names/></Joe>
+	0
+</get>
+
+	returns "dipshit"
+	
+<foreach><name/><Joe><nick-names/></Joe>	
+	<println><name/></println>
+</foreach>
+
+	prints to the standard output:
+	
+	"dipshit"
+	"fuckwad"
+	"fruitcake"
+	
+6. nested lists
+
+<set>
+	<mylist/>
+	<list><a/><b/><list><c/><list><d/><e/></list></list></list> // ==> (list a b (list c (list d e)))
+</set>
+
+<get>
+	<get>
+		<get>
+			<mylist/>
+			2			// 2 is just an entry in mylist's property map
+		</get>
+		1
+	</get>
+	0
+</get>
+
+returns d
+

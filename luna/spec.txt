@@ -1,0 +1,98 @@
+The environment:
+
+All Luna objects exist within an environment. Each environment has a name. All aspects of luna objects are configurable per environment. This document will describe Luna objects in terms of the default environment.
+
+Users:
+
+A Luna environment can have multiple users. Each user can belong to zero or more groups. By default, there is a group ("wizard") whose members have the ability to modifiy any object/slot, and a user ("admin") who is a member of the wizard group.
+
+Inheritance:
+
+When an object is given a parent, it receives a copy of all its parents' slots. The new object can override any of these slots, but by default they have the values defined by the parent.
+
+Attributes:
+
+Both objects and slots have meta-information called attributes. Attributes can only be changed by members of the wizard group. The default attributes are:
+
+Object attributes:
+- id: number, unique to the local environment, never reused
+- name: string, the name of the object; this should describe what the object is
+- description: free text description of what the object is/does
+- owner: the user that owns the object
+- parent: id, id of the parent of this object; top-level objects have a parent 0, which refers to the "object" object, the object that defines these fundamental properties; the "object" object's parent is null
+- children: list of ids, the ids of this object's children
+
+Slot attributes: 
+- name: string, the name of the slot; this should describe what the slot is
+- owner: the user that owns the slot
+- description: free text description of what the slot is/does
+
+Access modifiers:
+
+Objects and slots have access modifiers. Access modifiers describe who can do what to an object or slot. Access modifiers can be changed by the owner of the object/slot. 
+
+There are user-level, group-level, and default access modifiers. User-level access modifiers control what a specific user can/can't do, and group-level access modfiers control what an entire group can do. Default access modifiers describe the default value access for a user who is not named in one of the user or group access modifiers. Users are granted the permission described by the access modifier if they are a) granted permission by either a user- or group-level access modifier, or b) granted permission by the default access modifier and not denied permission by a user- or group-level access modifier. The default access modifiers are:
+
+Objects:
+- readable: whether the user/group can obtain a list of the slots on this object
+- writable: whether the user/group can add slots to the object
+- inheritable: whether the user/group can create new objects with this one as the parent
+- canChangeModifiers: whether the user/group can change the access modifiers
+
+Slots:
+- readable: whether the slot is readable by the user/group
+- writable: whether the slot is writable by the user/group
+- executable: whether the method is executable by the user/group; this applies only when the slot is used in a method context
+- inheritable: whether the slot should be copied to decendants created by the user/group
+- changeOwnershipInDecendants: whether, in children of this object created by the user/group, the owner is the owner of the parent slot, or the owner is the owner of the child object. 
+- canChangeModifiers: whether the user/group can change the access modifiers
+
+The readable, writable, and executable access modifiers also specify if they apply publicly (the user/group can read/modify/execute the slot in any context), protected (within the object and its children), and private (only within the object).
+
+Slots:
+
+A Luna object is basically a name/value map. These name/value pairs are called slots. A slot can have any non-null string value as its name. The value of a slot must be a literal or an object reference (for a property), or a procedure (for a method).
+
+Property values: a property can have any value. A value's type is determined based on the context in which it is used. By default, all values are strings, but a value can be converted to a number or a boolean if that's what is needed.
+
+Methods:
+
+A method is a procedure that can operate on its owning object, as well as values and other objects that are passed in as parameters. Methods execute with the permissions of the owner of the method's slot, meaning a method can read/modify object values only if the owner of the method's slot would be able to do that. 
+
+Notice that slots do not have a "type" attribute. There is no differentiation made between properties and methods because properties and methods can both be used in either property or method contexts. When a property is used in a method context, it just returns the value of the property. It cannot take any arguments. When a method is used in a property context, it simply returns the code of the procedure as a string.
+
+Slot Value conversions:
+
+	String			Number			Boolean				Object			Execute
+					
+String	N/A			Numeric value, or 0	False if empty, else true	anon obj w/ value slot 	Returns self	
+Number	String Value		N/A			True				anon obj w/ value slot  Returns self
+Boolean	String Value		0			N/A				anon obj w/ value slot	Returns self
+Object	String Value of obj id	Object ID		True				N/A			Returns self
+Method*	String Value of result	Number value of result	Boolean value of result		Object value of result	N/A
+
+* Try to execute method with no args. If this fails, conversion is done on the string value of the method.
+
+Basic structure of an object
+
+Object
+- attributes
+- access modifiers
+- slots
+
+Slot
+- attributes
+- access modifiers
+- value
+
+Server
+
+A Server is a collection of environments. A Server is publicly addressible at a specific hostname and port.
+
+Object IDs
+
+Every object has a globally unique ID (GUID). It is of the format:
+
+luna://<domain>[:<port>]/<environment>/<object id>
+
+<domain> can be any value, but in order for objects within the server to be accessible to other servers it must be a registered domain name that resolves to the IP address of the machine running the server.

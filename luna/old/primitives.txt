@@ -1,0 +1,170 @@
+*** map ***
+
+map is Luna's base data type. All other data types in Luna can be thought of as specializations of map (although
+they may not be represented that way in the interpreter/compiler). A map is basically a set of key/value pairs,
+where the key and the value can be instances of any Luna primitive.
+
+value slots:
+	can_get - if false, get can only be called locally
+	can_set - if false, set can only be called locally
+	keys - a list of the keys in the map
+	values - a list of the values in the map
+	size - the number of elements in the map
+	max_size - the maximum number of elements that the map can hold
+	print_format - default formatting string used by print
+
+method slots:
+	get - returns the value associated with the specified key
+	set - associates the specified key with the specified value
+	to_txt - returns a txt representation of the obj
+	print - prints a formatted txt representation of the obj, takes a formatting string as an arg
+
+*** tree ***
+
+A tree is a map that has slots for a parent and children.
+
+value slots:
+	parent - element of which this tree is a child
+	children - list of elements for whom this tree is the parent
+
+method slots:
+    sort - sort the tree
+
+*** obj ***
+
+An obj (or object) is a tree that is handled specially by the interpreter/compiler. An obj can be set to
+automatically persist. An obj's parent and children are all instances of obj.
+
+value slots:
+	name - the object name
+	id - the object's universal id
+	persist - flag that notifies the interpreter/compiler to automatically persist this obj
+
+method slots:
+
+*** ptree ***
+
+A ptree is a wrapper around a parse tree. It allows access to the actual XML elements, attributes, and values that
+make up a Luna expression.
+
+value slots:
+	name - the element name
+	value - the element's value (always a txt)
+	attributes - a map of the element's attributes
+
+method slots:
+	express - turns this ptree into a quoted expression
+
+*** list ***
+
+A list is a map whose keys are nums.
+
+method slots:
+    append - add an element to the end of the list
+    index_of - find the index of the first occurance of the given element
+    insert - insert the given element at the given index
+    remove - remove all occurances of the given element
+    region - return a new list containing all the elements of the original list between the start and end indicies
+    replace - replace all occurences of the specified element with the specified new element
+
+*** num ***
+
+A num is a list of digits. All list methods work on a num. A num can be used any place that a list is used.
+When the argument to a num's get method is the index of the decimal point (or equivalent delimiter), a txt
+representing the delimiter is returned. The size method returns the total number of digits and delimiters
+in a num (e.g. the size of 12345.6789 would be 10).
+
+value slots:
+   byte_size - the number of bytes the number takes up
+   base - this number's base (a num between 2 and 36)
+   int_part - the integer part of the number
+   dec_part - the decimal part of the number
+
+method slots:
+   to_base - return a new num that is equal to this num in base n
+
+usages:
+
+<num>123</num> 			  // argument is a literal value
+<num><txt>123</txt></num> // argument is a txt
+<num><expr/></num> 		  // expr is an expression that evaluates to a txt or a num
+
+*** txt ***
+
+A txt is a list of characters. All list methods work on a txt. A txt can be used any place that a list is used.
+
+method slots:
+    to_upper - turn all characters in the txt to upper case
+    to_lower - turn all characters in the txt to lower case
+
+*** operations on primitives ***
+
+ismap, istree, isobj, isptree, islist, isnum, istxt - returns true if the argument is of the respective type
+
+map -   creates an empty map when called with no arguments. when called with an even number of arguments, creates a
+        map containing the specified elements, where the odd elements are the keys and the even are the values.
+
+        example:
+
+        <map/> // returns an empty map
+
+        <map>
+            <foo/><bar/>
+            <num>1</num><list><a/><b/><c/></list>
+        </map>
+
+        returns
+
+        [ [foo  -> bar]
+          [1    -> (a b c)] ]
+
+tree -  creates an empty tree node when called with no arguments. when called with a single list argument, creates a
+        tree in the following manner:
+
+        for each non-list element in the list, create a tree node with that element in a slot labeled "value." each
+        non-list element is the parent of the list element(s) to its right. if there is more than one parent, an
+        anonymous node (a tree node with value=nil) will be the grandparent. if there are no non-list elements,
+        there will be an anonymous parent for each of the list elements (and an anonymous grandparent if there's
+        more than one list element). this algorithm will be followed recurisvely until there are no more list
+        elements.
+
+        examples:
+
+        (a (b (c d) e (f g))) =
+
+        <a>
+            <b>
+                <c>
+                <d>
+            <e>
+                <f>
+                <g>
+
+        (a (b c) (d e)) =
+
+        <a>
+            <anonymous>
+                <b>
+                <c>
+            <anonymous>
+                <d>
+                <e>
+
+        (a b (c d)) =
+
+        <anonymous>
+            <a>
+            <b>
+                <c>
+                <d>
+
+        ((b c) (d e)) =
+
+        <anonymous>
+            <anonymous>
+                <b>
+                <c>
+            <anonymous>
+                <d>
+                <e>
+

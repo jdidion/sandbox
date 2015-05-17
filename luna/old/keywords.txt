@@ -1,0 +1,5 @@
+Keywords
+
+create - creates new instances of Luna types. create takes a single attribute which is the name of the type to create. create also takes arguments that vary depending on the keyword.
+
+attributes: map, tree, ptree, obj, list, txt, num

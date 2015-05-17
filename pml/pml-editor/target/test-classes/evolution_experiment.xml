@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<properties xmlns="http://www.didion.net/pml/1.0">
+    <name>Evolution Experiment</name>
+    <group>
+        <name>General Parameters</name>
+        <property>
+            <name>numberOfExperiments</name>
+            <displayName>Number Of Experiments</displayName>
+            <description>numberOfExperiments &lt;integer&gt;: The number of experiments to run, they can be replicate or  independent experiments depending on the organism factory used (see below). A separate results  directory is created for each experiment. Experiments are executed sequentially.</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+            <minValue>1</minValue>
+            <defaultValues>100</defaultValues>
+        </property>
+        <property>
+            <name>numberOfGenerations</name>
+            <displayName>Number Of Generations</displayName>
+            <description>numberOfGenerations &lt;integer&gt;: The number of generations a single experiment is run for.</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+            <minValue>1</minValue>
+            <defaultValues>5000</defaultValues>
+        </property>
+        <property>
+            <name>populationSize</name>
+            <displayName>Population Size</displayName>
+            <description>populationSize &lt;integer&gt;: The (fixed) population size used.</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+            <minValue>1</minValue>
+            <defaultValues>500</defaultValues>
+        </property>
+        <property>
+            <name>randomSeed</name>
+            <displayName>Random Seed</displayName>
+            <description>randomSeed &lt;integer&gt;: Seed used to initialize the random number generator. Should normally be set  to '-1' for dictinct random number sequences. Can, however, be set to any integer number to run  experiments using the same sequence of random numbers given the same seed number is used.</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+            <minValue>-1</minValue>
+            <defaultValues>-1</defaultValues>
+        </property>
+        <property>
+            <name>savePopulationFiles</name>
+            <displayName>Save Population Files</displayName>
+            <description>savePopulationFiles &lt;true|false&gt;: Flag to specify if population results files should be written  for each generation assayed (see assayPeriodType/assayPeriodValue below), containing the assay  results (see assay plugins below) of each individual organism in the population.</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:boolean</type>
+            <defaultValues>true</defaultValues>
+        </property>
+        <property>
+            <name>stopOnAssay</name>
+            <displayName>Stop On Assay</displayName>
+            <description>stopOnAssay &lt;true|false&gt;: Flag to specifiy if experiment should stop if certain assay(s)'  condition are reached (see additional parameters below). If more than one assay is specified any  assay condition met (i.e. the first one met) stops the current experiment and the next  experiment is executed (if any left). REQUIRED ADDITIONAL PARAMETERS IF 'TRUE': stopOnAssayAssayPlugins, stopOnAssayConditions</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:boolean</type>
+            <defaultValues>false</defaultValues>
+        </property>
+        <property>
+            <name>stopOnAssayAssayPlugins</name>
+            <displayName>Stop On Assay Assay Plugins</displayName>
+            <description>stopOnAssayAssayPlugins &lt;list of classnames&gt;: List of assay plugins to evaluate condition for. For a list of available assay plugins see below. PLUGIN CLASSNAMES HAVE TO BE LISTED ON SUCCESSIVE LINES EACH, WITH EACH LINE ENDING WITH A BACKSLASH  PRECEDED BY A WHITESPACE (' \')!</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+            <minNumValues>0</minNumValues>
+            <maxNumValues>unbounded</maxNumValues>
+            <valueDelimiter> </valueDelimiter>
+            <allowedValues>
+              <values>org.cello.evodevo.core.AsexualsAPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.core.SexualsAPlugin</values>
+            </allowedValues>
+        </property>
+        <property>
+          <name>stopOnAssayConditions</name>
+          <displayName>Stop On Assay Conditions</displayName>
+          <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+          <minNumValues>0</minNumValues>
+          <maxNumValues>unbounded</maxNumValues>
+          <valueDelimiter> </valueDelimiter>
+        </property>
+    </group>
+    <group>
+        <name>Organism Parameters</name>
+        <property>
+            <name>numberOfGenes</name>
+            <displayName>Number Of Genes</displayName>
+            <description>numberOfGenes &lt;integer&gt;: Number of genes of the organism, i.e. size of square gene network matrix. (N in GeNES)</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+            <minValue>2</minValue>
+            <defaultValues>10</defaultValues>
+        </property>
+        <property>
+            <name>connectivity</name>
+            <displayName>Connectivity</displayName>
+            <description>connectivity &lt;double (0,1]&gt;: Connectivity of gene network matrix, i.e. fraction of all possible  connections in a fully connected directed network including self interactions. (c in GeNES)</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:decimal</type>
+            <minValue>0</minValue>
+            <maxValue>1</maxValue>
+            <defaultValues>0.25</defaultValues>
+        </property>
+        <property>
+            <name>geneActivationRateConstant</name>
+            <displayName>Gene Activation Rate Constant</displayName>
+            <description>geneActivationRateConstant &lt;integer&gt;: Constant specifying &quot;steepness&quot; of sigmoidal filter  function. (a in GeNES)</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+            <defaultValues>100</defaultValues>
+        </property>
+        <property>
+            <name>equilibriumInterval</name>
+            <displayName>Equilibrium Interval</displayName>
+            <description>equilibriumInterval &lt;integer&gt;: Number of time steps in interval used to determine equilibrium of  gene expression. (tau in GeNES)</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+            <minValue>1</minValue>
+            <defaultValues>10</defaultValues>
+        </property>
+        <property>
+            <name>maxDevelopmentTime</name>
+            <displayName>Max Development Time</displayName>
+            <description>maxDevelopmentTime &lt;integer&gt;: Maximum number of time steps used to test for equilibrium. (i in GeNES)</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+            <minValue>0</minValue>
+            <defaultValues>100</defaultValues>
+        </property>
+        <property>
+            <name>developmentalNoiseProbability</name>
+            <displayName>Developmental Noise Probability</displayName>
+            <description>(TO BE DOCUMENTED LATER)</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:decimal</type>
+            <minValue>0</minValue>
+            <maxValue>1</maxValue>
+            <defaultValues>0.0</defaultValues>
+        </property>
+        <property>
+            <name>developmentalNoiseAmount</name>
+            <displayName>Developmental Noise Amount</displayName>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:decimal</type>
+            <minValue>0</minValue>
+            <defaultValues>0.0</defaultValues>
+        </property>
+        <property>
+            <name>developmentalNoiseLocation</name>
+            <displayName>Developmental Noise Location</displayName>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+            <defaultValues>RAW_EXPRESSION</defaultValues>
+        </property>
+        <property>
+          <name>organismFactoryPlugin</name>
+          <displayName>Organism Factory Plugin</displayName>
+          <description>org.cello.evodevo.matrix.ClonalOrganismFactoryPlugin: Plugin that creates clonal populations of organisms from random founder organisms. If more than one 'numberOfExperiments' is specified it  creates a distinct clonal population for each experiment, i.e. independent experiments.</description>
+          <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+          <defaultValues>org.cello.evodevo.matrix.ClonalOrganismFactoryPlugin</defaultValues>
+          <allowedValues>
+            <values>org.cello.evodevo.matrix.ClonalOrganismFactoryPlugin</values>
+          </allowedValues>
+          <allowedValues>
+            <values>org.cello.evodevo.matrix.MatrixFilesOrganismFactoryPlugin</values>
+            <property>
+              <name>matrixFilePattern</name>
+              <displayName>Matrix File Pattern</displayName>
+              <description>matrixFilePattern &lt;filepath&gt;: The path to either a single organisms matrix file (has to have extension '.mtx') or to a set of sequentially numbered organism matrix files specified by a wildcard pattern  which gets replaced by numbers specfied by the inclusive range 'matrixFileFrom' and 'matrixFileTo'. Use a sequence of '?' as a wildcard to specify matrix files numbered with a fixed number of digits (e.g. 00-99), or '*' as a wildcard to specify matrix files numberd with varying number of digits (e.g. 1-100). The path can be relative to the directory where the experiment is executed in or it can be an absolute path into the file system.</description>
+              <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+              <defaultValues>../../founders/founder??.mtx</defaultValues>
+            </property>
+            <property>
+              <name>matrixFileFrom</name>
+              <displayName>Matrix File From</displayName>
+              <description>matrixFileFrom &lt;integer&gt;: The first number (inclusive) of a set of sequentially numbered organism  matrix files. </description>
+              <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+              <defaultValues>0</defaultValues>
+            </property>
+            <property>
+              <name>matrixFileTo</name>
+              <displayName>Matrix File To</displayName>
+              <description>matrixFileTo &lt;integer&gt;: The last number (inclusive) of a set of sequentially numbered organism matrix  files. </description>
+              <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+              <defaultValues>49</defaultValues>
+            </property>
+          </allowedValues>
+          <allowedValues>
+            <values>organismFactoryPlugin = org.cello.evodevo.matrix.DumpOrganismFactoryPlugin</values>
+            <property>
+              <name>dumpFilePattern</name>
+              <displayName>Dump File Pattern</displayName>
+              <description>dumpFilePattern &lt;filepath&gt;: The path to either a single population dump file (has to have extension '.jar') or to a set of sequentially numbered population dump files specified by a wildcard pattern  which gets replaced by numbers specfied by the inclusive range 'dumpFileFrom' and 'dumpFileTo'. Use a sequence of '?' as a wildcard to specify population dump files numbered with a fixed number of  digits (e.g. 00-99), or '*' as a wildcard to specify population dump files numberd with varying number  of digits (e.g. 1-100). The path can be relative to the directory where the experiment is executed in or it can be an absolute path into the file system.</description>
+              <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+              <defaultValues>../../dumps/generation_dump_5000_??.jar</defaultValues>
+            </property>
+            <property>
+              <name>dumpFileFrom</name>
+              <displayName>Dump File From</displayName>
+              <description>dumpFileFrom &lt;integer&gt;: The first number (inclusive) of a set of sequentially numbered population  dump files. </description>
+              <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+              <defaultValues>0</defaultValues>
+            </property>
+            <property>
+              <name>dumpFileTo</name>
+              <displayName>Dump File To</displayName>
+              <description>dumpFileTo &lt;integer&gt;: The last number (inclusive) of a set of sequentially numbered population dump  files. </description>
+              <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+              <defaultValues>49</defaultValues>
+            </property>
+            <property>
+              <name>dumpFilePeriod</name>
+              <displayName>Dump File Period</displayName>
+              <description>dumpFilePeriod &lt;integer&gt;: The interval between successive numbered population dump files in the above set of files. </description>
+              <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+              <minValue>1</minValue>
+              <defaultValues>1</defaultValues>
+            </property>
+          </allowedValues>
+          <allowedValues>
+            <values>organismFactoryPlugin = org.cello.evodevo.matrix.InvasionDumpOrganismFactoryPlugin</values>
+            <property>
+              <name>dumpFilePattern</name>
+              <displayName>Dump File Pattern</displayName>
+              <description>dumpFilePattern &lt;filepath&gt;: The path to either a single population dump file (has to have extension '.jar') or to a set of sequentially numbered population dump files specified by a wildcard pattern  which gets replaced by numbers specfied by the inclusive range 'dumpFileFrom' and 'dumpFileTo'. Use a sequence of '?' as a wildcard to specify population dump files numbered with a fixed number of  digits (e.g. 00-99), or '*' as a wildcard to specify population dump files numberd with varying number  of digits (e.g. 1-100). The path can be relative to the directory where the experiment is executed in or it can be an absolute path into the file system.</description>
+              <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+              <defaultValues>../../dumps/generation_dump_5000_??.jar</defaultValues>
+            </property>
+            <property>
+              <name>dumpFileFrom</name>
+              <displayName>Dump File From</displayName>
+              <description>dumpFileFrom &lt;integer&gt;: The first number (inclusive) of a set of sequentially numbered population  dump files. </description>
+              <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+              <defaultValues>0</defaultValues>
+            </property>
+            <property>
+              <name>dumpFileTo</name>
+              <displayName>Dump File To</displayName>
+              <description>dumpFileTo &lt;integer&gt;: The last number (inclusive) of a set of sequentially numbered population dump  files. </description>
+              <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+              <defaultValues>49</defaultValues>
+            </property>
+            <property>
+              <name>dumpFilePeriod</name>
+              <displayName>Dump File Period</displayName>
+              <description>dumpFilePeriod &lt;integer&gt;: The interval between successive numbered population dump files in the above set of files. </description>
+              <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+              <minValue>0</minValue>
+              <defaultValues>1</defaultValues>
+            </property>
+            <property>
+              <name>numberOfAsexuals</name>
+              <displayName>Number Of Asexuals</displayName>
+              <description>numberOfAsexuals &lt;integer&gt;: The number of organisms of the population dump that are assigned to be asexuals (i.e. have the asexual recombination modifier). </description>
+              <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+              <minValue>0</minValue>
+              <defaultValues>1</defaultValues>
+          </property>
+        </allowedValues>
+      </property>
+    </group>
+    <group>
+        <name>Founder Fitness Plugins</name>
+        <property>
+            <name>founderFitnessPlugins</name>
+            <displayName>Founder Fitness Plugins</displayName>
+            <description>founderFitnessPlugins &lt;list of classnames&gt;: Plugin(s) used to asses the fitness of the founder  organisms, i.e. the organisms of generation 0. Unfit organisms are discarded. Fitnesses are conducted in the order the plugins are listed and organisms have to pass ALL fitness  tests to be considered fit. PLUGIN CLASSNAMES HAVE TO BE LISTED ON SUCCESSIVE LINES EACH, WITH EACH LINE ENDING WITH A BACKSLASH  PRECEDED BY A WHITESPACE (' \')! Available plugins: (also see documentation of 'fitnessPlugins' below; though those don't make much sense as founder fitness plugins, thus they are listed below) org.cello.evodevo.core.AlwaysFitFPlugin: Organism is always fit. REQUIRED ADDITIONAL PARAMETER(S): none org.cello.evodevo.matrix.DevelopmentallyStableFPlugin: Organism is fit if it has reached developmental  stability. REQUIRED ADDITIONAL PARAMETER(S): none org.cello.evodevo.matrix.ConnectedNetworkFPlugin: Organism is fit if its network is connected, i.e. it contains no unconnected genes or subnetworks.  REQUIRED ADDITIONAL PARAMETER(S): none org.cello.evodevo.matrix.IncomingConnectionFPlugin: Organism is fit if each gene contains at least one incoming connection, a self-connections counts as an incoming connection. REQUIRED ADDITIONAL PARAMETER(S): none (OTHER PLUGINS TO BE DOCUMENTED LATER)</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+            <maxNumValues>unbounded</maxNumValues>
+            <valueDelimiter> </valueDelimiter>
+            <defaultValues>org.cello.evodevo.matrix.DevelopmentallyStableFPlugin org.cello.evodevo.matrix.ConnectedNetworkFPlugin</defaultValues>
+            <allowedValues>
+              <values>org.cello.evodevo.core.AlwaysFitFPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.DevelopmentallyStableFPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.ConnectedNetworkFPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.IncomingConnectionFPlugin</values>
+            </allowedValues>
+        </property>
+    </group>
+    <group>
+        <name>Fitness Plugins</name>
+        <property>
+            <name>fitnessPlugins</name>
+            <displayName>Fitness Plugins</displayName>
+            <description>fitnessPlugins &lt;list of classnames&gt;: Plugin(s) used to asses the fitness of the offspring of organisms  i.e. the organisms of all generations &gt; 0. Unfit offspring organisms die. Fitnesses are conducted in the order the plugins are listed and organisms have to pass ALL fitness  tests to be considered fit. PLUGIN CLASSNAMES HAVE TO BE LISTED ON SUCCESSIVE LINES EACH, WITH EACH LINE ENDING WITH A BACKSLASH  PRECEDED BY A WHITESPACE (' \')! Available plugins: (also see documentation of 'founderFitnessPlugins' above; although the following can be used as founder fitness plugins as well, these really only make sense as fitness plugins) org.cello.evodevo.matrix.StabilizingSelectionFPlugin: Organisms are fit based on the distance (D) between their equilibrium gene expression pattern and that of the founder, and the strength of stabilizing (parameter selectionStrength; fitness = exp[-D/selectionStrength]). Organisms that do not reach  developmental stability have fitness zero. REQUIRED ADDITIONAL PARAMETER: selectionStrength org.cello.evodevo.matrix.CostOfSexFPlugin: Sexual organisms are fit based on given probability. REQUIRED ADDITIONAL PARAMETER: costOfSex (OTHER PLUGINS TO BE DOCUMENTED LATER)</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+            <maxNumValues>unbounded</maxNumValues>
+            <valueDelimiter> </valueDelimiter>
+            <defaultValues>org.cello.evodevo.matrix.DevelopmentallyStableFPlugin</defaultValues>
+            <allowedValues>
+              <values>org.cello.evodevo.core.AlwaysFitFPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.DevelopmentallyStableFPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.StabilizingSelectionFPlugin</values>
+              <property>
+                <name>selectionStrength</name>
+                <displayName>Selection Strength</displayName>
+                <description>selectionStrength &lt;double&gt;: strength of stabilizing selection used by  org.cello.evodevo.matrix.StabilizingSelectionFPlugin. Small values result in strong stabilizing selection while large values result in weak/no stabilizing selection. Value has to be greater than zero.  (sigma in GeNES)</description>
+                <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:decimal</type>
+                <minValue inclusive="false">0</minValue>
+                <defaultValues>0.1</defaultValues>
+              </property>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.ConnectedNetworkFPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.IncomingConnectionFPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.CostOfSexFPlugin</values>
+              <property>
+                <name>costOfSex</name>
+                <displayName>Cost Of Sex</displayName>
+                <description>costOfSex &lt;double [0,1)&gt;: probability of sexual organisms not being fit used by  org.cello.evodevo.matrix.CostOfSexFPlugin</description>
+                <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:decimal</type>
+                <minValue inclusive="true">0</minValue>
+                <maxValue inclusive="false">1</maxValue>
+                <defaultValues>0.5</defaultValues>
+              </property>
+            </allowedValues>
+        </property>
+    </group>
+    <group>
+        <name>Reproducer Plugin</name>
+        <property>
+            <name>reproducerPlugin</name>
+            <displayName>Reproducer Plugin</displayName>
+            <description>org.cello.evodevo.matrix.SexualRPlugin: Sexual reproduction plugin that randomly recombines rows  of the matrices of two random individual organisms from the population.</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+            <defaultValues>org.cello.evodevo.matrix.SexualRPlugin</defaultValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.SexualRPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.AsexualRPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.ModifierReproductionTypePairedRPlugin</values>
+              <property>
+                <name>recombinationModifierDominant</name>
+                <displayName>Recombination Modifier Dominant</displayName>
+                <description>recombinationModifierDominant &lt;true|false&gt;: Flag to specify whether the sexual recombination modifier  is dominant or recessive.</description>
+                <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:boolean</type>
+                <defaultValues>false</defaultValues>
+              </property>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.IsolatedReproductionTypeRPlugin</values>
+            </allowedValues>
+        </property>
+    </group>
+    <group>
+        <name>Mutator Plugins</name>
+        <property>
+            <name>mutatorPlugins</name>
+            <displayName>Mutator Plugins</displayName>
+            <description>mutatorPlugins &lt;list of classnames&gt;: Plugin(s) used to mutate offspring organisms. Mutations are applied in the order the plugins are listed. PLUGIN CLASSNAMES HAVE TO BE LISTED ON SUCCESSIVE LINES EACH, WITH EACH LINE ENDING WITH A BACKSLASH  PRECEDED BY A WHITESPACE (' \')! Available plugins: org.cello.evodevo.matrix.InteractionsMPlugin: Mutates interaction strengths between genes with given probability, i.e. replaces random element(s) in the matrix with random numbers drawn from the standard normal distribution. REQUIRED ADDITIONAL PARAMETER: mutationProbability org.cello.evodevo.matrix.EnvironmentMPlugin: Perturbs the initial gene expression levels with given  probability. Replaces a gene's initial expression with a randomly drawn uniform variate between  -1 and 1 with probability perturbationProbability/numberOfGenes (0 &lt;= perturbationProbability &lt;= N  is the expected number of genes with altered initial expression per organism). The perturbed  initial gene expression pattern is NOT HERITABLE! REQUIRED ADDITIONAL PARAMETER: perturbationProbability (OTHER PLUGINS TO BE DOCUMENTED LATER)</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+            <maxNumValues>unbounded</maxNumValues>
+            <valueDelimiter> </valueDelimiter>
+            <defaultValues>org.cello.evodevo.matrix.InteractionsMPlugin</defaultValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.InteractionsMPlugin</values>
+              <property>
+                  <name>mutationProbability</name>
+                  <displayName>Mutation Probability</displayName>
+                  <description>mutationProbability &lt;double [0,1]&gt;: The mutation probability used for  org.cello.evodevo.matrix.InteractionsMPlugin. (mu in GeNES) Applied as: mutationProbability / (connectivity * numberOfGenes^2)</description>
+                  <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:decimal</type>
+                  <minValue>0</minValue>
+                  <maxValue>1</maxValue>
+                  <defaultValues>.01</defaultValues>
+              </property>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.EnvironmentMPlugin</values>
+              <property>
+                  <name>perturbationProbability</name>
+                  <displayName>Perturbation Probability</displayName>
+                  <description>perturbationProbability &lt;double [0,numberOfGenes]&gt;: The environmental perturbation probability used for org.cello.evodevo.matrix.EnvironmentMPlugin. (eta in GeNES) Applied as: perturbationProbability / numberOfGenes</description>
+                  <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:decimal</type>
+                  <minValue>0</minValue>
+                  <!-- TODO: enable interpolation -->
+                  <!-- <maxValue>${numberOfGenes}</maxValue> -->
+                  <defaultValues>0.1</defaultValues>
+              </property>
+            </allowedValues> 
+        </property>
+    </group>
+    <group>
+        <name>Organism File Saver Plugin</name>
+        <property>
+            <name>saveFounderLibrary</name>
+            <displayName>Save Founder Library</displayName>
+            <description>saveFounderLibrary &lt;true|false&gt;: Flag to specify if the founder organism of each experiment should saved to a dedicated directory (named 'founder_organisms' in the current directory).</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:boolean</type>
+            <defaultValues>true</defaultValues>
+        </property>
+        <property>
+            <name>saveGenerationDumps</name>
+            <displayName>Save Generation Dumps</displayName>
+            <description>saveGenerationDumps &lt;true|false&gt;: Flag to specify if population dumps containing all individual organisms of the populations at each generation configured to be assayed (see  assayPeriodType/assayPeriodValue below) should be written to the file system.</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:boolean</type>
+            <defaultValues>true</defaultValues>
+        </property>
+        <property>
+            <name>saverPlugin</name>
+            <displayName>Saver Plugin</displayName>
+            <description>saverPlugin &lt;classname&gt;: Plugin used to save organisms to the file system.</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+            <defaultValues>org.cello.evodevo.matrix.MatrixOrganismSPlugin</defaultValues>
+        </property>
+        <property>
+            <name>saveGeneMatrix</name>
+            <displayName>Save Gene Matrix</displayName>
+            <description>saveGeneMatrix &lt;true|false&gt;: Flag to specify if the organism matrix files of the founder organism and  each organism in the final population (only if 'saveGenerationDumps = false') should be written to the  file system.</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:boolean</type>
+            <defaultValues>true</defaultValues>
+        </property>
+        <property>
+            <name>saveGeneExpressions</name>
+            <displayName>Save Gene Expressions</displayName>
+            <description>saveGeneExpressions &lt;true|false&gt;: Flag to specify if the full gene expression dynamics profile of an organism should be written to the file system.</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:boolean</type>
+            <defaultValues>false</defaultValues>
+        </property>
+    </group>
+    <group>
+        <name>Assay Plugins</name>
+        <property>
+            <name>assayPeriodType</name>
+            <displayName>Assay Period Type</displayName>
+            <description>assayPeriodType &lt;STEP|LIST|LINEAR|EXPONENTIAL&gt;: The type of algorithm used to specify the period of generations to be assayed given the value in 'assayPeriodValue' below. STEP:        assay each assayPeriodValue'th generation LIST:        assay each generation listed in assayPeriodValue LINEAR:      assay assayPeriodValue generations distributed linear over numberOfGenerations EXPONENTIAL: assay assayPeriodValue generations distributed exponentially over  numberOfGenerations (i.e. lots of generations early on, and less and less towards the end of the experiment) THE FIRST AND LAST GENERATION ARE ALWAYS ASSAYED.</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+            <defaultValues>STEP</defaultValues>
+            <allowedValues>
+              <values>STEP</values>
+            </allowedValues>
+            <allowedValues>
+              <values>LIST</values>
+            </allowedValues>
+            <allowedValues>
+              <values>LINEAR</values>
+            </allowedValues>
+            <allowedValues>
+              <values>EXPONENTIAL</values>
+            </allowedValues>
+        </property>
+        <property>
+            <name>assayPeriodValue</name>
+            <displayName>Assay Period Value</displayName>
+            <description>assayPeriodValue &lt;integer(s)&gt;: the value used to specify which generations to assay, single  integer value or comma-separated list of generations if 'assayPeriodType = LIST'.</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+            <minValue>0</minValue>
+            <!-- TODO: enable expression interpolation -->
+            <!-- <maxNumValues>%{ $assayPeriodType == 'LIST' ? unbounded : 1 } -->
+            <maxNumValues>unbounded</maxNumValues>
+            <defaultValues>20</defaultValues>
+        </property>
+        <property>
+            <name>assayPlugins</name>
+            <displayName>Assay Plugins</displayName>
+            <description>assayPlugins &lt;list of classnames&gt;: Plugin(s) used to assay organisms/populations for each  generation assayed (see assayPeriodType/assayPeriodValue above). Assays are conducted and write  their results to the command line and results files in the order the plugins are listed. PLUGIN CLASSNAMES HAVE TO BE LISTED ON SUCCESSIVE LINES EACH, WITH EACH LINE ENDING WITH A BACKSLASH  PRECEDED BY A WHITESPACE (' \')! Available plugins: org.cello.evodevo.matrix.DevelopmentTimeAPlugin: Assays number of time steps until equilibrium gene expression of organism was reached (path length in GeNES) Column header name: DvTm REQUIRED ADDITIONAL PARAMETER(S): none org.cello.evodevo.matrix.RobustnessAPlugin: Assays mutational robustness of organism. Column header names: Rob# (# specifies perturbation round) REQUIRED ADDITIONAL PARAMETERS: numberOfPerturbationAssays, numberOfPerturbationRounds, perturbationFitnessPlugin org.cello.evodevo.core.GenotypeAPlugin: Assays number of unique genotypes and most abundant genotype in the population. Column header names: nGntp, maGntp REQUIRED ADDITIONAL PARAMETER(S): none org.cello.evodevo.core.PhenotypeAPlugin: Assays number of unique phenotypes and most abundant phenotype in the population. Column header names: nPhntp, maPhntp REQUIRED ADDITIONAL PARAMETER(S): none org.cello.evodevo.core.SexualsAPlugin: Assays number of sexuals (i.e. organisms having the sexual  recombination modifier) in the population. Column header name: nSex REQUIRED ADDITIONAL PARAMETER(S): none org.cello.evodevo.core.AsexualsAPlugin: Assays number of asexuals (i.e. organisms having the asexual  recombination modifier) in the population. Column header name: nAsex REQUIRED ADDITIONAL PARAMETER(S): none (OTHER PLUGINS TO BE DOCUMENTED LATER)</description>
+            <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+            <maxNumValues>unbounded</maxNumValues>
+            <valueDelimiter> </valueDelimiter>
+            <defaultValues>org.cello.evodevo.matrix.DevelopmentTimeAPlugin org.cello.evodevo.matrix.RobustnessAPlugin org.cello.evodevo.core.GenotypeAPlugin org.cello.evodevo.core.PhenotypeAPlugin</defaultValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.DevelopmentTimeAPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.matrix.RobustnessAPlugin</values>
+              <property>
+                <name>numberOfPerturbationAssays</name>
+                <displayName>Number Of Perturbation Assays</displayName>
+                <description>numberOfPerturbationAssays &lt;integer&gt;: Number of perturbations in each perturbation round used by  org.cello.evodevo.matrix.RobustnessAPlugin.</description>
+                <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+                <minValue>1</minValue>
+                <defaultValues>10</defaultValues>
+              </property>
+              <property>
+                <name>numberOfPerturbationRounds</name>
+                <displayName>Number Of Perturbation Rounds</displayName>
+                <description>numberOfPerturbationRounds &lt;integer&gt;: Number of perturbation rounds used by org.cello.evodevo.matrix.RobustnessAPlugin.</description>
+                <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:integer</type>
+                <minValue>1</minValue>
+                <defaultValues>1</defaultValues>
+              </property>
+              <property>
+                <name>perturbationFitnessPlugin</name>
+                <displayName>Perturbation Fitness Plugin</displayName>
+                <description>perturbationFitnessPlugin &lt;classname&gt;: Fitness plugin used by  org.cello.evodevo.matrix.RobustnessAPlugin for determining if pertubed organism is fit (see list of founder fitness/fitness plugins above for available plugins).</description>
+                <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+                <defaultValues>org.cello.evodevo.matrix.DevelopmentallyStableFPlugin</defaultValues>
+              </property>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.core.GenotypeAPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.core.PhenotypeAPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.core.SexualsAPlugin</values>
+            </allowedValues>
+            <allowedValues>
+              <values>org.cello.evodevo.core.AsexualsAPlugin</values>
+            </allowedValues>
+        </property>
+    </group>
+</properties>

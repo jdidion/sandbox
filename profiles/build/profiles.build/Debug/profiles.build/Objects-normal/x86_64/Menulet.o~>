@@ -1,0 +1,2 @@
+/Volumes/secure/projects/profiles/profiles/Menulet.m: In function '+[Menulet showMenuIcon]':
+/Volumes/secure/projects/profiles/profiles/Menulet.m:44: warning: instance variable 'statusItem' accessed in class method

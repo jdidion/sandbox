@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification
+    PUBLIC "-//Apache Software Foundation//Tapestry Specification 3.0//EN"
+    "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd">
+
+<page-specification class="net.didion.nagster.tapestry.page.IndexPage">
+  <description>Nagster Home Page</description>
+
+  <context-asset name="prev" path="/graphics/prev.gif"/>
+  <context-asset name="next" path="/graphics/next.gif"/>
+  <context-asset name="css" path="/css/nagster.css"/>
+
+  <bean name="delegate" class="org.apache.tapestry.valid.ValidationDelegate"/>
+
+  <component id="shell" type="Shell">
+    <static-binding name="title" value="Nagster"/>
+    <binding name="stylesheet" expression="assets.css"/>
+  </component>
+  <component id="prevMonth" type="ActionLink">
+    <binding name="listener" expression="listeners.previousMonth"/>
+  </component>
+  <component id="prevMonthImage" type="Image">
+    <binding name="image" expression="assets.prev"/>
+  </component>
+  <component id="monthYearForm" type="Form">
+    <binding name="delegate" expression="beans.delegate"/>
+  </component>
+  <component id="monthSelect" type="PropertySelection">
+    <binding name="value" expression="month"/>
+    <binding name="model" expression="monthModel"/>
+  </component>
+  <component id="yearField" type="contrib:NumericField">
+    <binding name="value" expression="year"/>
+    <binding name="minimum" expression="currentYear"/>
+    <static-binding name="displayName" value="year"/>
+    <static-binding name="type" value="int"/>
+  </component>
+  <component id="nextMonth" type="ActionLink">
+    <binding name="listener" expression="listeners.nextMonth"/>
+  </component>
+  <component id="nextMonthImage" type="Image">
+    <binding name="image" expression="assets.next"/>
+  </component>
+  <component id="calendarRow" type="Foreach">
+    <binding name="source" expression="calendarRows"/>
+    <static-binding name="element" value="tr"/>
+  </component>
+  <component id="calendarCell" type="Foreach">
+    <binding name="source" expression="components.calendarRow.value.cells"/>
+    <static-binding name="element" value="td"/>
+  </component>
+  <component id="day" type="Insert">
+    <binding name="value" expression="components.calendarCell.value.date"/>
+  </component>
+  <component id="eventLinks" type="Foreach">
+    <binding name="source" expression="components.calendarCell.value.events"/>
+    <static-binding name="element" value="ul"/>
+  </component>
+  <component id="eventLink" type="DirectLink">
+    <binding name="listener" expression="listeners.editEvent"/>
+    <binding name="parameters" expression="components.eventLinks.value.id"/>
+  </component>
+  <component id="eventName" type="Insert">
+    <binding name="value" expression="components.eventLinks.value.name"/>
+  </component>
+  <component id="newEventForm" type="Form">
+    <binding name="delegate" expression="beans.delegate"/>
+    <binding name="listener" expression="listeners.createEvent"/>
+  </component>
+  <component id="newEventName" type="TextField">
+    <binding name="value" expression="eventName"/>
+  </component>
+  <component id="newResourceForm" type="Form">
+    <binding name="delegate" expression="beans.delegate"/>
+    <binding name="listener" expression="listeners.addResource"/>
+  </component>
+  <component id="newResourceName" type="TextField">
+    <binding name="value" expression="resourceName"/>
+  </component>
+  <component id="newResourceFile" type="Upload">
+    <binding name="file" expression="resourceFile"/>
+  </component>
+  <component id="newApplicationForm" type="Form">
+    <binding name="delegate" expression="beans.delegate"/>
+    <binding name="listener" expression="listeners.addApplication"/>
+  </component>
+  <component id="newApplicationName" type="TextField">
+    <binding name="value" expression="applicationName"/>
+  </component>
+  <component id="newApplicationFile" type="TextField">
+    <binding name="value" expression="applicationExecutable"/>
+  </component>
+  <component id="newApplicationParams" type="TextField">
+    <binding name="value" expression="applicationParameters"/>
+  </component>
+</page-specification>

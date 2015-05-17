@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://www.didion.net/pml/1.0" 
+		xmlns:tns="http://www.didion.net/pml/1.0" 
+		elementFormDefault="qualified">
+    <element name="properties" type="tns:PropertyDescriptor"/>
+	<complexType name="PropertyDescriptor">
+      <sequence>
+        <element name="name" type="string"/>
+        <element name="description" type="string" minOccurs="0"/>
+		<choice>
+          <sequence>
+    		<element name="group" type="tns:PropertyGroup" minOccurs="1" maxOccurs="unbounded"/>
+    	  </sequence>
+          <sequence>
+    		<element name="property" type="tns:Property" minOccurs="1" maxOccurs="unbounded"/>
+    	  </sequence>
+    	</choice>
+      </sequence>
+    </complexType>
+    <complexType name="PropertyGroup">
+  	  <sequence>
+        <element name="name" type="string"/>
+        <element name="description" type="string" minOccurs="0"/>
+        <element name="property" type="tns:Property" maxOccurs="unbounded"/>
+  	  </sequence>
+    </complexType>
+    <complexType name="Property">
+      <sequence>
+        <element name="name" type="string"/>
+        <element name="displayName" type="string" minOccurs="0"/>
+        <element name="description" type="string" minOccurs="0"/>
+        <element name="type" type="tns:DataType"/>
+        <element name="editable" type="boolean" minOccurs="0" default="true">
+          <annotation>
+            <documentation>Instructs property file editors as to whether the default value for this property may be
+            changed. If set to 'true', defaultValues must be specified.</documentation>
+          </annotation>
+        </element>
+        <element name="minValue" type="tns:Value" minOccurs="0"/>
+        <element name="maxValue" type="tns:Value" minOccurs="0"/>
+        <element name="minNumValues" type="nonNegativeInteger" minOccurs="0" default="1">
+          <annotation>
+            <documentation>Ignored when type is boolean.</documentation>
+          </annotation>
+        </element>
+        <element name="maxNumValues" type="tns:multiplicity" minOccurs="0" default="1">
+          <annotation>
+            <documentation>Ignored when type is boolean.</documentation>
+          </annotation>
+        </element>
+        <element name="valueDelimiter" type="string" minOccurs="0" default=",">
+          <annotation>
+            <documentation>The character(s) used to delimit values. Defaults to ','.</documentation>
+          </annotation>
+        </element>
+        <element name="defaultValues" type="string" minOccurs="0"/>
+        <element name="allowedValues" type="tns:AllowedValues" minOccurs="0" maxOccurs="unbounded">
+          <annotation>
+            <documentation>Ignored when type is boolean.</documentation>
+          </annotation>
+        </element>
+      </sequence>
+    </complexType>
+    <complexType name="DataType">
+      <simpleContent>
+        <extension base="QName">
+          <attribute name="format" type="string" use="optional">
+            <annotation>
+              <documentation>Specify the format of the property value. Currently only used with date properties.</documentation>
+            </annotation>
+          </attribute>
+        </extension>
+      </simpleContent>
+    </complexType>
+    <complexType name="Value">
+      <annotation>
+        <documentation>Only valid for numeric or date types.</documentation>
+      </annotation>
+      <simpleContent>
+        <extension base="string">
+          <attribute name="inclusive" type="boolean" default="true">
+            <annotation>
+              <documentation>Whether the property value is inclusive of the specified value.</documentation>
+            </annotation>
+          </attribute>
+        </extension>
+      </simpleContent>
+    </complexType>
+    <complexType name="AllowedValues">
+      <sequence>
+        <element name="values" type="string"/>
+        <sequence minOccurs="0" maxOccurs="unbounded">
+          <element name="property" type="tns:Property" minOccurs="1" maxOccurs="unbounded"/>
+        </sequence>
+      </sequence>
+    </complexType>
+    <simpleType name="multiplicity">
+      <union memberTypes="nonNegativeInteger">
+        <simpleType>
+          <restriction base="NMTOKEN">
+            <enumeration value="unbounded"/>
+          </restriction>
+        </simpleType>
+      </union>
+    </simpleType>
+    <simpleType name="use">
+        <restriction base="string">
+            <enumeration value="optional"/>
+            <enumeration value="required"/>
+        </restriction>
+    </simpleType>
+</schema>
